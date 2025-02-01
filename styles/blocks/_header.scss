@@ -2,11 +2,30 @@
 .header {
     position: fixed;
     width: 100%;
-    &__bg {
-        background-color: var(--color-blue);
-        transition: all 0.3s ease 0s;
-        .header__content {
-            color: var(--color-white);
+    background-color: var(--color-white);
+    padding-top: 1rem;
+    @include table {
+        padding-top: 2.8rem;
+    }
+    &__content {
+        position: relative;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 3rem;
+        @include desktop {
+            gap: 2rem;
+        }
+    }
+    &__inner {
+        border-bottom: 1px solid var(--divider);
+        padding-bottom: 1rem;
+        @include table {
+            border-top: 1px solid var(--divider);
+            border-bottom: none;
+            padding-top: 1.3rem;
         }
     }
     &__body {
@@ -14,25 +33,77 @@
         justify-content: space-between;
         align-items: center;
         gap: 1rem;
-        padding: 0.8rem 0.6rem;
-        max-width: var(--container-width);
-        margin: 0 auto;
+        @include table {
+            display: block;
+        }
     }
     &__logo {
         z-index: 3; 
     }
-    &__links {
+    &__link {
+        transition: All 0.3s ease 0s;
+        @include hover {
+            color: var(--color-black);
+        }
+    }
+    &__box {
+        text-align: center;
+        @include table {
+            position: absolute;
+            top: -2.2rem;
+        }
+        &_city {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.3rem;
+            span {
+                color: #202020;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 140%;
+                text-decoration: underline dotted;
+                text-underline-offset: 4px;
+            }
+        }
+        &_link {
+            font-weight: 800;
+            @include fluid-text(15, 22);
+            margin-bottom: 0.625rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        &_text {
+            @include table {
+                display: none;
+            }
+        }
+    }
+    &__box--mod {
+        right: 0.625rem;
+    }
+    &__wrapper--mod {
+        @include table {
+            padding-top: 1.3rem;
+            justify-content: end;
+        }
+        .header__messengers {
+            @include table {
+                order: 1;
+            }
+        }
+    }
+    &__messengers {
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-wrap: wrap;
-        gap: 1rem;
-        @include fluid-text(12, 16);
+        gap: 0.625rem;
     }
-    &__link {
-        transition: All 0.5s ease 0s;
-        @include hover {
-            color: var(--color-black);
+    &__button {
+        @include mobile {
+            width: 100%;
         }
     }
 }

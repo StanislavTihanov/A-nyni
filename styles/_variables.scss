@@ -1,8 +1,16 @@
 :root {
-    --color-black: #000000;
+    --primary-text: #0F0F0F;
+    --secondary-text: #5E5E5E;
+    --secondary-text-disabled: #ACA8A8;
     --color-white: #FFFFFF;
     --color-gray: #F3F3F3;
-    --color-blue: #59a6ef;
+    --primary-blue: #24A7D6;
+    --primary-blue-hover: #0095CB;
+    --primary-blue-disabled: #88CBE3;
+    --primary-red: #FF4C62;
+    --primary-red-hover: #FF334C;
+    --primary-red-disabled: #F9BCC3;
+    --divider: #E3E3E3;
 
     --border: 1px solid var(--color-black);
     --border-radius: 1rem;
@@ -10,7 +18,7 @@
 
     --shadow: 0px 0px 20px 0px var(--color-black);
 
-    --font-family-base: 'Montserrat', Arial, sans-serif;
+    --font-family-base: 'Wix', Arial, sans-serif;
 
-    --container-width: 91.21rem;
+    --container-width: 78.1rem;
 }

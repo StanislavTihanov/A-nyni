@@ -1,30 +1,30 @@
 /*----------------------------------menu--------------------------------*/
 .menu {
+    padding: 1rem 0rem;
     ul {
         display: flex;
+        justify-content: space-around;
         align-items: center;
         flex-wrap: wrap;
         gap: 0.8rem 2rem;
     }
     &__link {
-        font-weight: 700;
         line-height: 120%;
-        text-transform: uppercase;
         position: relative;
-        @include fluid-text(12, 14);
-        transition: All 0.5s ease 0s;
+        @include fluid-text(16, 21);
+        transition: All 0.3s ease 0s;
         @include hover {
-            color: var(--color-black);
+            color: var(--primary-blue-hover);
         }
     }
-    @include mobile {
+    @include table {
         position: fixed;
         left: 0;
         top: -100%;
         width: 100%;
         height: 100%;
-        background: blueviolet;
-        padding: 8rem 2rem 2rem 2rem; 
+        background: var(--color-white);
+        padding: 7rem 2rem 2rem 2rem; 
         transition: All 0.5s ease 0s;
         overflow: auto;
         z-index: 9;
@@ -38,7 +38,6 @@
             display: block;
             text-align: center;
             position: relative;
-            color: var(--color-white);
         }
         ul li {
             margin-bottom: 1.3rem;
