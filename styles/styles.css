@@ -1006,9 +1006,6 @@ input[type=radio] {
   padding: 1.5rem 0px;
 }
 .footer__body {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   gap: 10px;
 }
 
