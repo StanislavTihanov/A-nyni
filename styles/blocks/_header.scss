@@ -4,6 +4,7 @@
     width: 100%;
     background-color: var(--color-white);
     padding-top: 1rem;
+    z-index: 9;
     @include table {
         padding-top: 2.8rem;
     }
@@ -52,7 +53,7 @@
             position: absolute;
             top: -2.2rem;
         }
-        &_city {
+        &-city {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -67,7 +68,7 @@
                 text-underline-offset: 4px;
             }
         }
-        &_link {
+        &-link {
             font-weight: 800;
             @include fluid-text(15, 22);
             margin-bottom: 0.625rem;
@@ -75,7 +76,7 @@
             align-items: center;
             gap: 0.3rem;
         }
-        &_text {
+        &-text {
             @include table {
                 display: none;
             }
@@ -86,7 +87,7 @@
     }
     &__wrapper--mod {
         @include table {
-            padding-top: 1.3rem;
+            padding-top: 1rem;
             justify-content: end;
         }
         .header__messengers {
@@ -101,7 +102,7 @@
         align-items: center;
         gap: 0.625rem;
     }
-    &__button {
+    &__callback {
         @include mobile {
             width: 100%;
         }

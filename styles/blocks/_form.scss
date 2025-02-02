@@ -1,98 +1,90 @@
 /*----------------------------------form--------------------------------*/
 .form {
-    max-width: 600px;
+    max-width: 100%;
     margin: 0 auto;
     color: var(--color-black);
-    padding: 2rem;
+    padding: 2rem 3.8rem;
     background-color: var(--color-white);
     border-radius: 5px;
     margin-bottom: 1rem;
     position: relative;
-    &::after {
-        position: absolute;
-        content: '';
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background: #4d036231 url(../images/loading.gif) center / 50px no-repeat;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease 0s;
-      }
-    &._sending::after {
-        opacity: 1;
-        visibility: visible;
+    box-shadow: 0 4px 12px 0 #e1ecf0;
+    @include table {
+        padding: 1.25rem 1rem;
+    }
+    &__title {
+        @include fluid-text(20, 30);
+        margin-bottom: 2rem;
+        line-height: 100%;
+        font-weight: 700;
+        span {
+            color: var(--primary-blue);
+        }
+        @include mobile {
+            text-align: center;
+        }
     }
     &__label {
-        font-size: 1rem;
-        display: block;
-        margin-bottom: 0.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.3rem;
+        margin-bottom: 1.25rem;
+        @include mobile {
+            flex-wrap: wrap;
+        }
     }
-    &__input,
-    &__textarea {
+    &__input {
         width: 100%;
-        background-color: #f1d5f9;
-        padding: 0.7rem;
-        border-radius: 5px;
+        border: 1px solid var(--divider);
+        padding: 1.1rem 1.3rem;
+        border-radius: 8px;
         transition: all 0.3s ease 0s;
+        &::placeholder {
+            color: #95979D;
+            @include fluid-text(14, 17);
+        }
         &:focus {
-            box-shadow: 0 0 15px var(--color-blue);
+            box-shadow: 0 0 15px var(--primary-blue-disabled);
         }
         &._error {
-            border: 1px solid red;
+            border: 1px solid var(--primary-red-hover);
+        }
+        @include mobile {
+            padding: 1rem;
         }
     }
     &__error {
         font-size: 0.7rem;
-        color: red;
+        color: var(--primary-red-hover);
         opacity: 0;
-    }
-    &__error.view {
-        opacity: 1;
-    }
-    &__textarea {
-        resize: none;
-        margin-bottom: 1rem;
     }
     &__button {
         width: 100%;
         padding: 1rem;
-        background-color: var(--color-blue);
+        background-color: var(--primary-blue);
         cursor: pointer;
         color: var(--color-white);
-        border-radius: 5px;
-        font-weight: 700;
-        font-size: 1.5rem;
+        border-radius: 30px;
+        font-weight: 800;
+        @include fluid-text(17, 19);
+        @include hover {
+            background-color: var(--primary-blue-hover);
+        }
+        &:active {
+            background-color: var(--primary-blue-disabled);
+        }
     }
-}
-.file {
-    &__item {
-        position: relative;
-    }
-    &__input {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        opacity: 0;
-        font-size: 0;
-        cursor: pointer;
-    }
-    &__button {
-        background-color: var(--color-blue);
-        color: var(--color-white);
-        display: inline-flex;
-        padding: 0.4rem;
-        border-radius: 5px;
-    }
-    &__preview {
-        display: inline-block;
-        max-width: 100px;
-        margin-top: 1rem;
-        img {
-            width: 100%;
+    &__text {
+        color: #A9A9A9;
+        @include fluid-text(11, 13);
+        &-link {
+            display: inline;
+            text-decoration: underline dotted;
+            text-underline-offset: 4px;
+        }
+        @include mobile {
+            text-align: center;
         }
     }
 }

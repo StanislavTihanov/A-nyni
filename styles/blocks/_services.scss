@@ -1,0 +1,38 @@
+/*----------------------------------services--------------------------------*/
+
+.services {
+
+    &__top {
+        text-align: center;
+        margin-bottom: 2.6rem;
+        .subtitle {
+            margin-bottom: 1rem;
+        }
+    }
+    &__cards {
+        display: grid;
+        grid-template-columns:repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2.5rem 4rem;
+        @include table {
+            gap: 2rem;
+        }
+        @include mobile {
+            grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+        }
+    }
+}
+.button-more {
+    display: none;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 140%;
+    color: var(--primary-blue-hover);
+    background-color: inherit;
+    text-decoration: underline dotted;
+    text-underline-offset: 4px;
+    @include mobile {
+        display: block;
+    }
+}
+
+/*---------------------------------services--------------------------------*/

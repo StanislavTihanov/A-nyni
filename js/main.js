@@ -81,7 +81,7 @@ window.addEventListener('scroll', () => {
 
 
 //------------------------------------------------------------------------Меню-Бургер
-const burgerMenu = document.querySelector('.burger__wrapper');
+const burgerMenu = document.querySelector('.burger');
 const menuBody= document.querySelector('.menu');
 
 if(burgerMenu) {
@@ -428,157 +428,70 @@ document.addEventListener ('click', (e) => {
 //}
 //------------------------------------------------------------------------Animation
 
-//------------------------------------------------------------------------Обработка формы
-//document.addEventListener('DOMContentLoaded', function () {
-//  const forms = document.querySelectorAll('form'); // Получаем все формы на странице
-//
-//  forms.forEach((form) => {
-//    const phoneInput = form.querySelector('._number'); // Поле ввода телефона
-//
-//    // Добавляем маску для номера телефона
-//    if (phoneInput) {
-//      Inputmask("+7 (999) 999-99-99").mask(phoneInput);
-//    }
-//
-//    form.addEventListener('submit', formSend);
-//
-//    async function formSend(e) {
-//      e.preventDefault();
-//
-//      let error = formValidate(form);
-//      let formData = new FormData(form);
-//
-//      const formImage = form.querySelector('#formImage');
-//      if (formImage && formImage.files[0]) {
-//        formData.append('image', formImage.files[0]);
-//      }
-//
-//      if (error === 0) {
-//        form.classList.add('_sending');
-//        let response = await fetch('send.php', {
-//          method: 'POST',
-//          body: formData
-//        });
-//
-//      if (response.ok) {
-//        let result = await response.json();
-//        
-//        // Закрытие формы (например, скрытие через класс)
-//        form.style.display = 'none';
-//        
-//        // Добавляем сообщение об успешной отправке
-//        const successMessage = document.createElement('div');
-//        successMessage.classList.add('success-message'); // Добавляем класс для стилизации
-//        successMessage.textContent = 'Форма успешно отправлена! Спасибо за ваш отклик.';
-//        form.parentElement.appendChild(successMessage); // Добавляем сообщение в контейнер формы
-//        
-//        const formPreview = form.querySelector('#formPreview');
-//        if (formPreview) {
-//          formPreview.innerHTML = '';
-//        }
-//        form.reset();
-//        form.classList.remove('_sending');
-//      } else {
-//        showErrorMessage('Ошибка при отправке формы');
-//        form.classList.remove('_sending');
-//      }
-//      }
-//    }
-//
-//    function formValidate(form) {
-//      let error = 0;
-//      let formReq = form.querySelectorAll('._req');
-//
-//      formReq.forEach((input) => {
-//        formRemoveError(input);
-//
-//        if (input.classList.contains('_email')) {
-//          if (!emailTest(input)) { // проверка на корректность email
-//            formAddError(input);
-//            error++;
-//          }
-//        } else if (input.classList.contains('_number')) {
-//          if (!phoneTest(input)) { // проверка на корректность телефона
-//            formAddError(input);
-//            error++;
-//          }
-//        } else if (input.getAttribute('type') === "checkbox" && input.checked === false) {
-//          formAddError(input);
-//          error++;
-//        } else {
-//          if (input.value === '') {
-//            formAddError(input);
-//            error++;
-//          }
-//        }
-//      });
-//      return error;
-//    }
-//
-//    function formAddError(input) {
-//      input.parentElement.classList.add('_error');
-//      input.classList.add('_error');
-//    
-//      // Ищем элемент с классом form__error внутри контейнера родителя
-//      const errorSpan = input.parentElement.querySelector('.form__error');
-//      if (errorSpan) {
-//        errorSpan.classList.add('view'); // Добавляем класс view
-//      }
-//    }
-//    
-//    function formRemoveError(input) {
-//      input.parentElement.classList.remove('_error');
-//      input.classList.remove('_error');
-//    
-//      // Ищем элемент с классом form__error внутри контейнера родителя
-//      const errorSpan = input.parentElement.querySelector('.form__error');
-//      if (errorSpan) {
-//        errorSpan.classList.remove('view'); // Удаляем класс view
-//      }
-//    }
-//    
-//    // проверка email
-//    function emailTest(input) {
-//      return /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/.test(input.value);
-//    }
-//
-//    // проверка телефона
-//    function phoneTest(input) {
-//      return /^\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$/.test(input.value);
-//    }
-//
-//    // Работа с изображением
-//    const formImage = form.querySelector('#formImage');
-//    const formPreview = form.querySelector('#formPreview');
-//
-//    if (formImage) {
-//      formImage.addEventListener('change', () => {
-//        uploadFile(formImage.files[0]);
-//      });
-//
-//      function uploadFile(file) {
-//        if (!['image/jpeg', 'image/png', 'image/gif'].includes(file.type)) {
-//          showErrorMessage('Только изображения');
-//          formImage.value = '';
-//          return;
-//        }
-//        if (file.size > 2 * 1024 * 1024) {
-//          showErrorMessage('Файл должен быть менее 2 МБ');
-//          return;
-//        }
-//        let reader = new FileReader();
-//        reader.onload = function (e) {
-//          if (formPreview) {
-//            formPreview.innerHTML = `<img src="${e.target.result}" alt="Фото">`;
-//          }
-//        };
-//        reader.onerror = function (e) {
-//          showErrorMessage('Ошибка загрузки изображения');
-//        };
-//        reader.readAsDataURL(file);
-//      }
-//    }
-//  });
-//});
-//
-//------------------------------------------------------------------------Обработка формы
+//------------------------------------------------------------------------Проверка формы
+document.addEventListener('DOMContentLoaded', function () {
+  const forms = document.querySelectorAll('form');
+
+  forms.forEach((form) => {
+    form.addEventListener('submit', formSend);
+  });
+
+  async function formSend(e) {
+    e.preventDefault();
+    const form = e.target;
+    let error = formValidate(form);
+    
+    if (error === 0) {
+      form.classList.add('_sending');
+      // Здесь можно добавить логику отправки формы (например, AJAX-запрос)
+    }
+  }
+
+  function formValidate(form) {
+    let error = 0;
+    const formReq = form.querySelectorAll('._req');
+
+    formReq.forEach((input) => {
+      formRemoveError(input);
+
+      if (input.classList.contains('_number')) { 
+        if (!phoneTest(input)) { 
+          formAddError(input);
+          error++;
+        }
+      } else if (input.value.trim() === '') { // Проверка, что поле не пустое
+        formAddError(input);
+        error++;
+      }
+    });
+    
+    return error;
+  }
+
+  function formAddError(input) {
+    input.parentElement.classList.add('_error');
+    input.classList.add('_error');
+  }
+
+  function formRemoveError(input) {
+    input.parentElement.classList.remove('_error');
+    input.classList.remove('_error');
+  }
+
+  function phoneTest(input) {
+    return /^\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$/.test(input.value);
+  }
+});
+//------------------------------------------------------------------------проверка форм
+
+//------------------------------------------------------------------------раскрытие карточек 
+document.querySelector(".button-more").addEventListener("click", function() {
+  // Показываем все карточки, убирая у них класс card--none
+  document.querySelectorAll(".card--none").forEach(card => {
+    card.classList.remove("card--none");
+  });
+
+  // Скрываем кнопку "Показать еще"
+  this.style.display = "none";
+});
+//------------------------------------------------------------------------раскрытие карточек 

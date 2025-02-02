@@ -157,6 +157,7 @@ address {
   width: 100%;
   background-color: var(--color-white);
   padding-top: 1rem;
+  z-index: 9;
 }
 @media (max-width: 64rem) {
   .header {
@@ -219,14 +220,14 @@ address {
     top: -2.2rem;
   }
 }
-.header__box_city {
+.header__box-city {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 0.3rem;
 }
-.header__box_city span {
+.header__box-city span {
   color: #202020;
   font-weight: 600;
   font-size: 18px;
@@ -235,7 +236,7 @@ address {
           text-decoration: underline dotted;
   text-underline-offset: 4px;
 }
-.header__box_link {
+.header__box-link {
   font-weight: 800;
   font-size: clamp(0.9375rem, 1.7886178862vw, 1.375rem);
   margin-bottom: 0.625rem;
@@ -244,7 +245,7 @@ address {
   gap: 0.3rem;
 }
 @media (max-width: 64rem) {
-  .header__box_text {
+  .header__box-text {
     display: none;
   }
 }
@@ -253,7 +254,7 @@ address {
 }
 @media (max-width: 64rem) {
   .header__wrapper--mod {
-    padding-top: 1.3rem;
+    padding-top: 1rem;
     justify-content: end;
   }
 }
@@ -269,7 +270,7 @@ address {
   gap: 0.625rem;
 }
 @media (max-width: 48rem) {
-  .header__button {
+  .header__callback {
     width: 100%;
   }
 }
@@ -380,11 +381,11 @@ address {
 
 /*----------------------------------search--------------------------------*/
 /*----------------------------------burger--------------------------------*/
-.burger__wrapper {
+.burger {
   display: none;
 }
 @media (max-width: 64rem) {
-  .burger__wrapper {
+  .burger {
     width: 36px;
     height: 36px;
     flex: 0 0 auto;
@@ -392,12 +393,9 @@ address {
     position: relative;
     display: block;
     z-index: 999;
-  }
-  .burger__wrapper .burger {
-    z-index: 3;
     cursor: pointer;
   }
-  .burger__wrapper .burger__line {
+  .burger__line {
     height: 2px;
     width: 21px;
     position: absolute;
@@ -406,27 +404,27 @@ address {
     transform: translate(-50%, -50%);
     border-radius: 1px;
   }
-  .burger__wrapper .burger__line:first-child {
+  .burger__line:first-child {
     left: 50%;
     top: 25%;
   }
-  .burger__wrapper .burger__line:nth-child(2) {
+  .burger__line:nth-child(2) {
     left: 50%;
     top: 50%;
   }
-  .burger__wrapper .burger__line:last-child {
+  .burger__line:last-child {
     left: 50%;
     top: 75%;
   }
-  .burger__wrapper._active .burger__line:nth-child(2) {
+  .burger._active .burger__line:nth-child(2) {
     opacity: 0;
   }
-  .burger__wrapper._active .burger__line:first-child {
+  .burger._active .burger__line:first-child {
     transform: rotate(-45deg);
     left: 30%;
     top: 50%;
   }
-  .burger__wrapper._active .burger__line:last-child {
+  .burger._active .burger__line:last-child {
     transform: rotate(45deg);
     left: 30%;
     top: 50%;
@@ -437,6 +435,84 @@ address {
 /*----------------------------------main-section--------------------------------*/
 .main-section {
   margin-top: 7rem;
+  position: relative;
+}
+@media (max-width: 64rem) {
+  .main-section {
+    padding: 9rem 0rem;
+  }
+}
+.main-section__content {
+  position: relative;
+  z-index: 2;
+}
+.main-section__content .title {
+  margin-bottom: 2rem;
+}
+@media (max-width: 48rem) {
+  .main-section__content .title {
+    text-align: center;
+  }
+}
+.main-section__body {
+  display: flex;
+  align-items: center;
+  gap: 1rem 5rem;
+}
+@media (max-width: 48rem) {
+  .main-section__body {
+    flex-wrap: wrap;
+  }
+}
+.main-section__info {
+  max-width: 30rem;
+}
+.main-section__list ul li {
+  margin-bottom: 0.625rem;
+  position: relative;
+  padding-left: 1.3rem;
+}
+.main-section__list ul li::before {
+  position: absolute;
+  content: "";
+  width: 9px;
+  height: 9px;
+  top: 0.25rem;
+  left: 0;
+  background-color: var(--primary-red);
+  border-radius: 50%;
+}
+.main-section__image {
+  margin-bottom: -7.5rem;
+  margin-top: -2rem;
+  flex-basis: 32rem;
+}
+@media (max-width: 64rem) {
+  .main-section__image {
+    margin-top: 0rem;
+    margin-bottom: -7rem;
+  }
+}
+@media (max-width: 48rem) {
+  .main-section__image {
+    margin-top: -3rem;
+    margin-bottom: -6.5rem;
+  }
+}
+.main-section__form {
+  margin-bottom: -5rem;
+}
+@media (max-width: 64rem) {
+  .main-section__form {
+    margin-bottom: 0rem;
+  }
+}
+.main-section__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 /*----------------------------------main-section--------------------------------*//*# sourceMappingURL=critical.css.map */

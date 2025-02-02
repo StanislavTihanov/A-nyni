@@ -1,16 +1,14 @@
 /*----------------------------------burger--------------------------------*/
-.burger__wrapper {
+.burger {
     display: none;
     @include table {
-        width: 36px;
-        height: 36px;
-        flex: 0 0 auto;
-        border-radius: 50%;
-        position: relative;
-        display: block;
-        z-index: 999;
-        .burger {
-            z-index: 3;
+            width: 36px;
+            height: 36px;
+            flex: 0 0 auto;
+            border-radius: 50%;
+            position: relative;
+            display: block;
+            z-index: 999;
             cursor: pointer;
             &__line {
                 height: 2px;
@@ -33,22 +31,19 @@
                     top: 75%;
                 }
             }
-            
-        }
-        &._active .burger__line:nth-child(2){
-            opacity: 0;
-        }
-        &._active .burger__line:first-child{
-            transform: rotate(-45deg);
-            left: 30%;
-            top: 50%;
-        }
-        &._active .burger__line:last-child{
-            transform: rotate(45deg);
-            left: 30%;
-            top: 50%;
+            &._active .burger__line:nth-child(2){
+                opacity: 0;
+            }
+            &._active .burger__line:first-child{
+                transform: rotate(-45deg);
+                left: 30%;
+                top: 50%;
+            }
+            &._active .burger__line:last-child{
+                transform: rotate(45deg);
+                left: 30%;
+                top: 50%;
         }
     }
 }
-
 /*----------------------------------burger--------------------------------*/

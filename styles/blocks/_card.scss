@@ -1,0 +1,86 @@
+/*----------------------------------main-section--------------------------------*/
+
+.card {
+    box-shadow: 0 4px 18px 0 rgba(173, 210, 224, 0.3);
+    border-radius: 25px;
+    border: 1px solid #EAF3F5;
+    padding: 2.7rem 2.5rem 1.25rem 2.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    @include hover {
+        border: 1px solid var(--primary-red);
+    }
+    @include mobile {
+        padding: 1.25rem 1rem;
+    }
+    &__title {
+        @include fluid-text(20, 24);
+        font-weight: 700;
+        margin-bottom: 1.3rem;
+        max-width: 10rem;
+        line-height: 120%;
+    }
+    &__cost {
+        font-weight: 800;
+        color: var(--primary-red);
+        @include fluid-text(20, 25);
+        margin-bottom: 4rem;
+        @include mobile {
+            margin-bottom: 2rem;
+        }
+    }
+    &__list {
+        max-width: 19rem;
+        margin-bottom: 2rem;
+        ul li {
+            padding-left: 1rem;
+            line-height: 112%;
+            position: relative;
+            @include fluid-text(14, 16);
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+            &::before {
+                position: absolute;
+                content: '';
+                width: 10px;
+                height: 10px;
+                top: 0.2rem;
+                left: 0;
+                border-top: 5px solid transparent;
+                border-bottom: 5px solid transparent;
+                border-left: 6px solid var(--primary-blue); 
+            }
+        }
+    }
+
+    &__button {
+        margin-bottom: 1rem;
+    }
+
+    &__link {
+        text-align: center;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+    }
+    &__img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        img {
+            width: 100%;
+        }
+        max-width: 10rem;
+        @include mobile {
+            max-width: 6rem;
+        }
+    }
+    &--none {
+        @include mobile {
+            display: none;
+        }
+    }
+}
+
+/*----------------------------------main-section--------------------------------*/

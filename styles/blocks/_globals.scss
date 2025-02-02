@@ -38,18 +38,20 @@ body {
     }
 }
 .title {
-    @include fluid-text(24, 60);
+    @include fluid-text(24, 50);
     line-height: 100%;
     color: var(--color-black);
+    text-transform: uppercase;
+    font-weight: 700;
 }
 .subtitle {
-    @include fluid-text(18, 32);
-    line-height: 100%;
-    color: var(--color-white);
+    @include fluid-text(22, 40);
+    line-height: 120%;
+    font-weight: 600;
 }
 .text {
     @include fluid-text(14, 18);
-    color: var(--color-black);
+    color: var(--secondary-text);
     line-height: 100%;
 }
 .btn {
@@ -61,13 +63,18 @@ body {
     width: 100%;
     text-align: center;
     @include fluid-text(15, 19);
+    font-weight: 700;
+    
 }
 .btn-outline {
-    border: 1px solid var(--color-orange);
+    border: 1px solid var(--primary-red);
     background-color: var(--color-white);
     @include hover {
         color: var(--color-white);
-        background-color: var(--color-orange);
+        background-color: var(--primary-red);
+    }
+    &:active {
+        background-color: var(--primary-red-disabled);
     }
 }
 .btn-filled {
