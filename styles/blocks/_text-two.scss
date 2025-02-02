@@ -1,0 +1,52 @@
+/*----------------------------------text-two--------------------------------*/
+
+.text-two {
+    .text-container {
+        max-width: 100%;
+    }
+    .toggle-label {
+        color: var(--primary-text);
+    }
+    .toggle-label::after {
+        content: "Показать подробнее";
+    }
+    &__top {
+        margin-bottom: 1.3rem;
+        .subtitle {
+            margin-bottom: 1.3rem;
+        }
+    }
+    &__list {
+        @include fluid-text(16, 18);
+        ol li {
+            margin-bottom: 0.625rem;
+            margin-left: 1.2rem;
+        }
+    }
+    &__list-title {
+        font-weight: 700;
+        margin-bottom: 0.625rem;
+    }
+    &__sublist {
+        ul li {
+            margin-bottom: 0.625rem;
+            position: relative;
+            padding-left: 1rem;
+            &::before {
+                position: absolute;
+                content: '';
+                width: 10px;
+                height: 10px;
+                top: 0.2rem;
+                left: 5px;
+                border-top: 5px solid transparent;
+                border-bottom: 5px solid transparent;
+                border-left: 6px solid var(--primary-blue); 
+            }
+        }
+    }
+}
+
+
+
+/*----------------------------------text-two--------------------------------*/

@@ -1,0 +1,38 @@
+/*----------------------------------blockquote-------------------------------*/
+
+.blockquote {
+    box-shadow: 0 4px 18px 0 rgba(173, 210, 224, 0.3);
+    background: var(--color-white);
+    border: 1px solid var(--color-white);
+    padding: 2.3rem 1.9rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 100%;
+    @include hover {
+        border: 1px solid var(--primary-blue-disabled);
+    }
+    &__name {
+        margin-bottom: 1rem;
+        font-weight: 600;
+        @include fluid-text(18, 21);
+    }
+    &__text {
+        margin-bottom: 1rem;
+        @include fluid-text(14, 15);
+    }
+    &__date {
+        font-weight: 500;
+        font-size: 13px;
+        color: #8b8b8b;
+    }
+    .button-more {
+        display: block;
+    }
+    @include mobile {
+        text-align: center;
+        padding: 1.7rem 1.2rem;
+    }
+}
+
+/*----------------------------------blockquote--------------------------------*/

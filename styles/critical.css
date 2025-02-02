@@ -91,7 +91,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: inherit;
 }
 
-address {
+address, cite {
   font-style: normal;
 }
 
@@ -157,7 +157,7 @@ address {
   width: 100%;
   background-color: var(--color-white);
   padding-top: 1rem;
-  z-index: 9;
+  z-index: 999;
 }
 @media (max-width: 64rem) {
   .header {

@@ -1,0 +1,69 @@
+/*---------------------------------------articles----------------------------*/
+.articles {
+    &__body {
+        display: flex;
+        align-items: stretch;
+        gap: 1rem 3rem;
+        border: 1px solid var(--divider);
+        padding: 1.3rem 1.25rem;
+        border-radius: 25px;
+        height: 100%;
+        @include table {
+            flex-wrap: wrap;
+        }
+    }
+    &__img {
+        img {
+            border-radius: 8px;
+        }
+    }
+    &__info {
+       flex-basis: 23rem;
+       height: 100%;
+       @include mobile {
+        flex-basis: 100%;
+      }
+    }
+    &__info-date {
+        font-weight: 700;
+        @include fluid-text(15, 17);
+        line-height: 141%;
+        color: var(--primary-blue);
+        margin-bottom: 0.6rem;
+    }
+    &__info-title {
+        font-weight: 600;
+        line-height: 109%;
+        @include fluid-text(18, 22);
+        margin-bottom: 1rem;
+    }
+    &__info-text {
+        @include fluid-text(14, 15);
+        line-height: 147%;
+        margin-bottom: 0.6rem;
+    }
+    &__info-link {
+        font-weight: 500;
+        line-height: 140%;
+        @include fluid-text(15, 18);
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        transition: All 0.3s ease 0s;
+        &:hover {
+            color: var(--primary-blue);
+        }
+    }
+    &__button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        cursor: pointer;
+        .articles__info-title {
+            @include fluid-text(18, 20);
+            margin-bottom: 0.6rem;
+        }
+    }
+}
+
+/*---------------------------------------articles---------------------------*/

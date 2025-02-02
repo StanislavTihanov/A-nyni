@@ -1,0 +1,73 @@
+/*----------------------------------reviews-------------------------------*/
+
+.reviews {
+    background-color: #EAF3F5;
+    @include mobile {
+        padding-bottom: 6rem;
+    }
+    &__content {
+        position: relative;
+    }
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 3.15rem;
+        @include mobile {
+            justify-content: center;
+            margin-bottom: 1.3rem;
+        }
+    }
+
+    &__buttons {
+        margin-right: 10rem;
+        .btn {
+            padding: 1rem 3.8rem;
+            @include mobile {
+                padding: 1rem;
+            }
+        }
+        @include mobile {
+            position: absolute;
+            bottom: -5rem;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+        }
+    }
+}
+.text-container {
+    max-width: 16rem;
+    @include mobile {
+        margin: 0 auto;
+    }
+}
+.hidden-text {
+    display: none;
+}
+.toggle-input {
+    display: none;
+}
+.toggle-input:checked ~ .hidden-text {
+    display: block;
+    line-height: 147%;
+}
+.toggle-input:checked ~ .toggle-label::after {
+    content: " Скрыть";
+}
+.toggle-label {
+    display: inline-block;
+    color: var(--primary-blue);
+    cursor: pointer;
+    text-decoration: underline dotted;
+    text-underline-offset: 4px;
+    margin: 1rem 0rem;
+}
+.toggle-label::after {
+    content: "Показать полностью";
+}
+
+
+
+/*----------------------------------reviews--------------------------------*/
