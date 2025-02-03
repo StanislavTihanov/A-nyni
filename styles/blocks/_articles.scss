@@ -1,5 +1,11 @@
 /*---------------------------------------articles----------------------------*/
 .articles {
+    @include mobile {
+        margin-bottom: 3rem;
+    }
+    &__content {
+        position: relative;
+    }
     &__body {
         display: flex;
         align-items: stretch;

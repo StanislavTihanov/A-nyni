@@ -1,0 +1,65 @@
+/*---------------------------------------map----------------------------*/
+
+.map {
+    position: relative;
+    @include mobile {
+        padding-bottom: 16rem;
+    }
+    &__content {
+        position: relative;
+    }
+    &__body {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        img {
+            filter: grayscale(100%);
+        }
+    }
+    &__form {
+        position: relative;
+        z-index: 2;
+    }
+    .form {
+        padding: 3.2rem 3.8rem;
+        margin-bottom: 0rem;
+        max-width: 31.5rem;
+        margin: 0;
+        @include mobile {
+            padding: 1.3rem 1rem;
+        }
+        &__label {
+            display: block;
+        }
+        &__input {
+            margin-bottom: 1.25rem;
+        }
+        &__text {
+            margin-bottom: 2rem;
+        }
+        &__text-link {
+            text-decoration: none;
+        }
+    }
+}
+
+.form {
+
+    &__title {
+    }
+
+
+    &__button {
+    }
+
+
+    &__text-link {
+    }
+}
+.btn {
+}
+
+
+/*---------------------------------------map----------------------------*/

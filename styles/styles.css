@@ -1042,6 +1042,14 @@ body {
 
 /*----------------------------------text-two--------------------------------*/
 /*---------------------------------------articles----------------------------*/
+@media (max-width: 48rem) {
+  .articles {
+    margin-bottom: 3rem;
+  }
+}
+.articles__content {
+  position: relative;
+}
 .articles__body {
   display: flex;
   align-items: stretch;
@@ -1110,20 +1118,68 @@ body {
 }
 
 /*---------------------------------------articles---------------------------*/
+/*---------------------------------------map----------------------------*/
+.map {
+  position: relative;
+}
+@media (max-width: 48rem) {
+  .map {
+    padding-bottom: 16rem;
+  }
+}
+.map__content {
+  position: relative;
+}
+.map__body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.map__body img {
+  filter: grayscale(100%);
+}
+.map__form {
+  position: relative;
+  z-index: 2;
+}
+.map .form {
+  padding: 3.2rem 3.8rem;
+  margin-bottom: 0rem;
+  max-width: 31.5rem;
+  margin: 0;
+}
+@media (max-width: 48rem) {
+  .map .form {
+    padding: 1.3rem 1rem;
+  }
+}
+.map .form__label {
+  display: block;
+}
+.map .form__input {
+  margin-bottom: 1.25rem;
+}
+.map .form__text {
+  margin-bottom: 2rem;
+}
+.map .form__text-link {
+  text-decoration: none;
+}
+
+/*---------------------------------------map----------------------------*/
 /*---------------------------------------sliders----------------------------*/
-.reviews-slider {
+.reviews-slider,
+.articles-slider {
   overflow: hidden;
   position: relative;
 }
 @media (max-width: 48rem) {
-  .reviews-slider {
+  .reviews-slider,
+  .articles-slider {
     padding-bottom: 3rem;
   }
-}
-
-.articles-slider {
-  overflow: hidden;
-  position: relative;
 }
 
 /*---------------------------------------параметры чтобы слайды имели одинаковую высоту----------------------------*/
@@ -1139,31 +1195,40 @@ body {
 
 /*---------------------------------------параметры чтобы слайды имели одинаковую высоту----------------------------*/
 .reviews__content .swiper-button-next,
-.reviews__content .swiper-button-prev {
+.reviews__content .swiper-button-prev,
+.articles__content .swiper-button-next,
+.articles__content .swiper-button-prev {
   top: 1.5rem;
 }
 @media (max-width: 48rem) {
   .reviews__content .swiper-button-next,
-  .reviews__content .swiper-button-prev {
+  .reviews__content .swiper-button-prev,
+  .articles__content .swiper-button-next,
+  .articles__content .swiper-button-prev {
     display: none;
   }
 }
 
-.reviews__content .swiper-button-next {
+.reviews__content .swiper-button-next,
+.articles__content .swiper-button-next {
   right: 1.3rem;
 }
 
-.reviews__content .swiper-button-prev {
+.reviews__content .swiper-button-prev,
+.articles__content .swiper-button-prev {
   left: 91%;
 }
 @media (max-width: 64rem) {
-  .reviews__content .swiper-button-prev {
+  .reviews__content .swiper-button-prev,
+  .articles__content .swiper-button-prev {
     left: 85%;
   }
 }
 
 .reviews__content .swiper-button-next::after,
-.reviews__content .swiper-button-prev::after {
+.reviews__content .swiper-button-prev::after,
+.articles__content .swiper-button-next::after,
+.articles__content .swiper-button-prev::after {
   font-size: 0.7rem;
   color: var(--primary-text);
   border: 1px solid #c6c6c6;
@@ -1173,14 +1238,17 @@ body {
 }
 @media (hover: hover) {
   .reviews__content .swiper-button-next::after:hover,
-  .reviews__content .swiper-button-prev::after:hover {
+  .reviews__content .swiper-button-prev::after:hover,
+  .articles__content .swiper-button-next::after:hover,
+  .articles__content .swiper-button-prev::after:hover {
     border: 1px solid var(--primary-red);
     background-color: var(--primary-red);
     color: var(--color-white);
   }
 }
 
-.reviews__content .swiper-pagination-bullet {
+.reviews__content .swiper-pagination-bullet,
+.articles__content .swiper-pagination-bullet {
   opacity: 1;
   background-color: var(--color-white);
   border: 2px solid var(--primary-blue);
@@ -1191,12 +1259,14 @@ body {
   opacity: 0;
 }
 @media (max-width: 48rem) {
-  .reviews__content .swiper-pagination-bullet {
+  .reviews__content .swiper-pagination-bullet,
+  .articles__content .swiper-pagination-bullet {
     opacity: 1;
   }
 }
 
-.reviews__content .swiper-pagination-bullet-active {
+.reviews__content .swiper-pagination-bullet-active,
+.articles__content .swiper-pagination-bullet-active {
   width: 1rem;
   height: 1rem;
   scale: 1;
@@ -1639,7 +1709,7 @@ body {
 }
 @media (max-width: 48rem) {
   .tab-labels {
-    flex-wrap: wrap;
+    display: none;
   }
 }
 

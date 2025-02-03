@@ -1,14 +1,11 @@
 /*---------------------------------------sliders----------------------------*/
-.reviews-slider {
+.reviews-slider,
+.articles-slider {
     overflow: hidden;
     position: relative;
     @include mobile {
       padding-bottom: 3rem;
   }
-}
-.articles-slider {
-  overflow: hidden;
-  position: relative;
 }
   /*---------------------------------------параметры чтобы слайды имели одинаковую высоту----------------------------*/
   .reviews-slider .swiper-wrapper {
@@ -21,23 +18,29 @@
 }
   /*---------------------------------------параметры чтобы слайды имели одинаковую высоту----------------------------*/
   .reviews__content .swiper-button-next,
-  .reviews__content .swiper-button-prev {
+  .reviews__content .swiper-button-prev,
+  .articles__content .swiper-button-next,
+  .articles__content .swiper-button-prev {
     top: 1.5rem;
     @include mobile {
         display: none;
     }
 }
-.reviews__content .swiper-button-next {
+.reviews__content .swiper-button-next,
+.articles__content .swiper-button-next {
     right: 1.3rem;
 }
-.reviews__content .swiper-button-prev {
+.reviews__content .swiper-button-prev,
+.articles__content .swiper-button-prev {
     left: 91%;
     @include table{
       left: 85%;
     }
 }
 .reviews__content .swiper-button-next::after,
-.reviews__content .swiper-button-prev::after {
+.reviews__content .swiper-button-prev::after,
+.articles__content .swiper-button-next::after,
+.articles__content .swiper-button-prev::after {
     font-size: 0.7rem;
     color: var(--primary-text);
     border: 1px solid #c6c6c6;
@@ -50,7 +53,8 @@
       color: var(--color-white);
     }
 }
-.reviews__content .swiper-pagination-bullet {
+.reviews__content .swiper-pagination-bullet,
+.articles__content .swiper-pagination-bullet  {
     opacity: 1;
     background-color: var(--color-white);
     border: 2px solid var(--primary-blue);
@@ -63,7 +67,8 @@
         opacity: 1;
     }
 }
-.reviews__content .swiper-pagination-bullet-active {
+.reviews__content .swiper-pagination-bullet-active,
+.articles__content .swiper-pagination-bullet-active {
     width: 1rem;
     height: 1rem;
     scale: 1;
