@@ -1,9 +1,12 @@
 /*----------------------------------main-section--------------------------------*/
 .main-section {
-    margin-top: 9rem;
+    margin-top: 200px;
     position: relative;
-    @include table {
-        margin-top: 13.5rem;
+    padding-top: 50px;
+    padding-bottom: 250px;
+    margin-bottom: 50px;
+    @include mobile {
+        margin-bottom: 100px;
     }
     &__content {
         position: relative;
@@ -47,7 +50,7 @@
         }
     }
     &__image {
-        margin-bottom: -7.5rem;
+        margin-bottom: -2.5rem;
         margin-top: -2rem;
         flex-basis: 32rem;
         @include table {
@@ -56,19 +59,25 @@
         }
         @include mobile {
             margin-top: -3rem;
-            margin-bottom: -6.5rem;
+            margin-bottom: 0rem;
+            text-align: center;
         }
-    }
-    &__image--mod {
-        margin-bottom: -8rem;
-        @include mobile {
-            margin-bottom: -6.5rem;
+        &-bg {
+            position: absolute;
+            top: 0;
+            z-index: -1;
+            @include table {
+                top: 200px;
+            }
         }
     }
     &__form {
-        margin-bottom: -5rem;
-        @include table {
-            margin-bottom: 0rem;
+        position: absolute;
+        width: 100%;
+        top: 105%;
+        padding-right: 20px;
+        @include mobile {
+            top: 95%;
         }
     }
     &__bg {
@@ -83,19 +92,24 @@
     }
     &--mod {
         @include mobile {
-            padding-bottom: 22rem;
+            padding-bottom: 18rem;
         }
+        padding-bottom: 0px;
+        margin-bottom: 80px;
     }
     &--m {
         @include mobile {
             padding-bottom: 12rem;
         }
-
+        padding-bottom: 0px;
+        margin-bottom: 80px;
     }
     &--art {
         @include mobile {
-            padding-bottom: 2rem;
+            margin-bottom: 30px;
         }
+        padding-bottom: 0px;
+        margin-bottom: 80px;
     }
 }
 

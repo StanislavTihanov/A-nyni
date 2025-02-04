@@ -45,6 +45,7 @@ document.querySelectorAll('.article__nav-link').forEach(link => {
 });
 //------------------------------------------------------------------------скролинг в статье
 
+
 //------------------------------------------------------------------------Слайдер
 const reviewsSlider = document.querySelector('.reviews-slider');
 if (reviewsSlider) {

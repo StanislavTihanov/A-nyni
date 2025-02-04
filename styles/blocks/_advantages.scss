@@ -26,6 +26,7 @@
         align-items: center;
         gap: 1rem;
         text-align: start;
+        margin-bottom: 24px;
     }
        &:not(:last-child) {
         &::after {
@@ -50,9 +51,22 @@
         margin-bottom: 1.27rem;
         position: relative;
         z-index: 2;
+        img {
+            width: 139px;
+            height: 139px;
+            border-radius: 50%;
+            border: 2px dashed var(--primary-blue);
+            object-fit: cover; 
+            padding: 23px;
+            @include mobile {
+                width: 86px;
+                height: 86px;
+                padding: 14px;
+            }
+          }
         @include mobile {
             flex: none;
-            max-width: 5.4rem;
+            margin-bottom: 0rem;
         }
     }
 
@@ -65,6 +79,7 @@
     &__block-text {
         @include fluid-text(15, 16);
         color: var(--secondary-text);
+        line-height: 120%;
     }
 }
 /*----------------------------------advantages-------------------------------*/

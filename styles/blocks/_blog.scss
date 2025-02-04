@@ -1,7 +1,6 @@
 /*----------------------------------blog--------------------------------*/
 
 .blog {
-    margin-top: 3rem;
     &__content {
         position: relative;
         z-index: 2;
@@ -9,7 +8,7 @@
     &__item {
         border-radius: 16px;
         border: 1px solid var(--divider);
-        padding: 1.3rem 2.8rem;
+        padding: 24px 30px;
         cursor: pointer;
         transition: all 0.3s ease 0s;
         display: flex;
@@ -61,12 +60,13 @@
     &__tile {
         @include fluid-text(16, 20);
         font-weight: 600;
-        line-height: 120%;
+        line-height: 140%;
         margin-bottom: 0.6rem;
     }
     &__text {
         color: #3D3D3D;
         margin-bottom: 0.8rem;
+        line-height: 140%;
         &-link {
             display: inline;
             color: var(--primary-blue);

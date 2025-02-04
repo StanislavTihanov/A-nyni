@@ -51,8 +51,24 @@
     &__text {
         color: #666666;
         @include fluid-text(14, 18);
-        line-height: 133%;
-        margin-bottom: 1rem;
+        line-height: 140%;
+        p {
+            margin-bottom: 1rem;
+        }
+        h2 {
+            @include fluid-text(20, 28);
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--primary-text);
+            line-height: 140%;
+        }
+        h3 {
+            @include fluid-text(16, 18);
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--primary-text);
+            line-height: 140%;
+        }
     }
     &__block {
         display: flex;

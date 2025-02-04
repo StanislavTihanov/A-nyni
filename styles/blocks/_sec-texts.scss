@@ -1,13 +1,30 @@
 /*----------------------------------text-two--------------------------------*/
 
 .sec-texts {
+    .subtitle {
+        margin-bottom: 1.3rem;
+    }
     &__top {
         margin-bottom: 1.3rem;
-        .subtitle {
-            margin-bottom: 1.3rem;
+        p {
+            @include fluid-text(14, 18);
+            line-height: 133%;
+            color: #666;
+            margin-bottom: 24px;
         }
-        &>.text {
-            margin-bottom: 2rem;
+        h4 {
+            font-weight: 700;
+            color: var(--primary-red);
+            @include fluid-text(18, 22);
+            margin-bottom: 12px;
+        }
+        h3 {
+            @include fluid-text(16, 18);
+        }
+        ol li {
+            margin-left: 20px;
+            @include fluid-text(16, 18);
+            line-height: 167%;
         }
     }
     &__subtitle {
@@ -26,21 +43,25 @@
             margin-bottom: 2.5rem;
         }
     }
-    &__list-title {
+    h3 {
         font-weight: 700;
         margin-bottom: 0.625rem;
+        line-height: 140%;
     }
-    &__sublist {
+    &__sublist,
+    &__content--mod,
+    &__top {
         ul li {
             margin-bottom: 0.625rem;
             position: relative;
             padding-left: 1rem;
+            line-height: 140%;
             &::before {
                 position: absolute;
                 content: '';
                 width: 10px;
                 height: 10px;
-                top: 0.2rem;
+                top: 7px;
                 left: 5px;
                 border-top: 5px solid transparent;
                 border-bottom: 5px solid transparent;
@@ -67,14 +88,24 @@
         }
     }
     &__content--mod {
-        .subtitle {
+        h2 {
             font-weight: 600;
             @include fluid-text(20, 22);
             line-height: 119%;
+            margin-bottom: 22px;
         }
-        .sec-texts__subtitle {
+        h3 {
             color: var(--primary-text);
             @include fluid-text(16, 28);
+        }
+        p {
+            @include fluid-text(14, 18);
+            line-height: 140%;
+            color: #666;
+            margin-bottom: 24px;
+        }
+        ul li {
+            margin-left: 20px;
         }
     }
 }
