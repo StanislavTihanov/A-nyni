@@ -1,0 +1,94 @@
+/*----------------------------------blog--------------------------------*/
+
+.blog {
+
+    &__item {
+        border-radius: 16px;
+        border: 1px solid var(--divider);
+        padding: 1.3rem 2.8rem;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem 1.25rem;
+        margin-bottom: 1rem;
+        @include hover {
+            border: 1px solid var(--primary-blue);
+        }
+        @include mobile {
+            flex-wrap: wrap;
+            padding: 1rem;
+        }
+    }
+    &__img {
+        flex-basis: 8.5rem;
+        img {
+            width: 100%;
+        }
+        @include mobile {
+            flex-basis: 100%;
+        }
+    }
+    &__top {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        margin-bottom: 0.8rem;
+        @include mobile {
+            flex-wrap: wrap;
+        }
+    }
+    &__top-tag {
+        font-size: 13px;
+        line-height: 185%;
+        background-color: var(--divider);
+        padding: 0.1rem 0.8rem;
+        border-radius: 4px;
+        border: 1px solid var(--divider);
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        @include hover {
+            border: 1px solid var(--primary-blue);
+            background-color: var(--color-white);
+            color: var(--primary-blue);
+        }
+    }
+    &__tile {
+        @include fluid-text(16, 20);
+        font-weight: 600;
+        line-height: 120%;
+        margin-bottom: 0.6rem;
+    }
+    &__text {
+        color: #3D3D3D;
+        margin-bottom: 0.8rem;
+    }
+    &__text-link {
+        display: inline;
+        color: var(--primary-blue);
+        text-decoration: underline dotted;
+    }
+    &__bottom {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        @include mobile {
+            justify-content: space-between;
+        }
+    }
+    &__views {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5px;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 185%;
+        color: #8b8b8b;
+        position: relative;
+        border-left: 1px solid var(--divider);
+        padding-left: 1rem;
+    }
+}
+
+/*----------------------------------blog--------------------------------*/

@@ -1,0 +1,122 @@
+/*----------------------------------text-two--------------------------------*/
+
+.sec-texts {
+    &__top {
+        margin-bottom: 1.3rem;
+        .subtitle {
+            margin-bottom: 1.3rem;
+        }
+        &>.text {
+            margin-bottom: 2rem;
+        }
+    }
+    &__subtitle {
+        @include fluid-text(18, 22);
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: var(--primary-red)
+    }
+    &__list {
+        @include fluid-text(16, 18);
+        ol li {
+            margin-bottom: 0.625rem;
+            margin-left: 1.2rem;
+        }
+        @include mobile {
+            margin-bottom: 2.5rem;
+        }
+    }
+    &__list-title {
+        font-weight: 700;
+        margin-bottom: 0.625rem;
+    }
+    &__sublist {
+        ul li {
+            margin-bottom: 0.625rem;
+            position: relative;
+            padding-left: 1rem;
+            &::before {
+                position: absolute;
+                content: '';
+                width: 10px;
+                height: 10px;
+                top: 0.2rem;
+                left: 5px;
+                border-top: 5px solid transparent;
+                border-bottom: 5px solid transparent;
+                border-left: 6px solid var(--primary-blue); 
+            }
+        }
+    }
+    &__block {
+        background-color: #EAF3F5;
+        padding: 1.25rem 1rem;
+        border-radius: 25px;
+        max-width: 20rem;
+        text-align: center;
+        display: none;
+        margin: auto;
+        &-img {
+            margin-bottom: 1rem;
+        }
+        q {
+            quotes: none; 
+        }
+        @include mobile {
+            display: block;
+        }
+    }
+    &__content--mod {
+        .subtitle {
+            font-weight: 600;
+            @include fluid-text(20, 22);
+            line-height: 119%;
+        }
+        .sec-texts__subtitle {
+            color: var(--primary-text);
+            @include fluid-text(16, 28);
+        }
+    }
+}
+
+.text-container {
+    max-width: 100%;
+    @include mobile {
+        margin: 0 auto;
+    }
+}
+.hidden-text {
+    display: none;
+}
+.toggle-input {
+    display: none;
+}
+.toggle-input:checked ~ .hidden-text {
+    display: block;
+    line-height: 147%;
+}
+.toggle-input:checked ~ .toggle-label::after {
+    content: " Скрыть";
+}
+.toggle-label {
+    display: inline-block;
+    color: var(--primary-text);
+    cursor: pointer;
+    text-decoration: underline dotted;
+    text-underline-offset: 4px;
+    margin: 1rem 0rem;
+    background-color: inherit;
+}
+.toggle-label::after {
+    content: "Показать подробнее";
+}
+.text-container--mod .toggle-label {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+.text-container--mod .toggle-label::after  {
+    content: "Показать ещё отзывы";
+    text-align: center;
+}
+/*----------------------------------text-two--------------------------------*/

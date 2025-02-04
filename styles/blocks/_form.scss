@@ -53,6 +53,21 @@
         @include mobile {
             padding: 1rem;
         }
+        &-surname {
+            margin-bottom: 1rem;
+        }
+    }
+    &__textarea {
+        width: 100%;
+        border: 1px solid var(--divider);
+        padding: 1.1rem 1.3rem;
+        border-radius: 8px;
+        min-height: 7rem;
+        margin-bottom: 1rem;
+        &::placeholder {
+            color: #95979D;
+            @include fluid-text(14, 17);
+        }
     }
     &__error {
         font-size: 0.7rem;
@@ -78,6 +93,7 @@
     &__text {
         color: #A9A9A9;
         @include fluid-text(11, 13);
+        margin-bottom: 1rem;
         &-link {
             display: inline;
             text-decoration: underline dotted;
@@ -85,6 +101,25 @@
         }
         @include mobile {
             text-align: center;
+        }
+    }
+    &--mod {
+        .btn {
+            max-width: 17rem;
+            margin-bottom: 1rem;
+            @include mobile {
+                max-width: 100%;
+            }
+        }
+    }
+    &__radio-buttons {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        margin-bottom: 1.3rem;
+        color: #95979D;
+        @include mobile {
+            flex-wrap: wrap;
         }
     }
 }

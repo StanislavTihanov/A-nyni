@@ -8,6 +8,8 @@
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
+    height: 100%;
     @include hover {
         border: 1px solid var(--primary-red);
     }
@@ -64,16 +66,21 @@
         text-decoration: underline;
         text-underline-offset: 4px;
     }
+    &__link--mod {
+        text-align: start;
+        color: var(--primary-blue);
+        margin-bottom: 1.5rem;
+    }
     &__img {
         position: absolute;
-        top: 0;
-        right: 0;
+        top: -1.25rem;
+        right: -4.5rem;
         img {
             width: 100%;
         }
-        max-width: 10rem;
         @include mobile {
-            max-width: 6rem;
+            right: -3rem;
+            max-width: 10rem;
         }
     }
     &--none {

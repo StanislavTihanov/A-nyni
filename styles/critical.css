@@ -439,7 +439,7 @@ address, cite {
 }
 @media (max-width: 64rem) {
   .main-section {
-    padding: 9rem 0rem;
+    margin-top: 13.5rem;
   }
 }
 .main-section__content {
@@ -452,6 +452,8 @@ address, cite {
 @media (max-width: 48rem) {
   .main-section__content .title {
     text-align: center;
+    margin: auto;
+    margin-bottom: 2.5rem;
   }
 }
 .main-section__body {
@@ -499,6 +501,14 @@ address, cite {
     margin-bottom: -6.5rem;
   }
 }
+.main-section__image--mod {
+  margin-bottom: -8rem;
+}
+@media (max-width: 48rem) {
+  .main-section__image--mod {
+    margin-bottom: -6.5rem;
+  }
+}
 .main-section__form {
   margin-bottom: -5rem;
 }
@@ -513,6 +523,16 @@ address, cite {
   height: 100%;
   top: 0;
   left: 0;
+}
+@media (max-width: 48rem) {
+  .main-section--mod {
+    padding-bottom: 21rem;
+  }
+}
+@media (max-width: 48rem) {
+  .main-section--m {
+    padding-bottom: 12rem;
+  }
 }
 
 /*----------------------------------main-section--------------------------------*//*# sourceMappingURL=critical.css.map */

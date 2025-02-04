@@ -25,6 +25,9 @@ body {
 }
 .section {
     padding: 4rem 0rem;
+    @include table {
+        padding: 1.25rem 0rem;
+    }
 }
 ._ibg {
     position: relative;
@@ -40,9 +43,20 @@ body {
 .title {
     @include fluid-text(24, 50);
     line-height: 100%;
-    color: var(--color-black);
     text-transform: uppercase;
     font-weight: 700;
+}
+.title-secondary {
+    @include fluid-text(24, 38);
+    line-height: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+    &--mod {
+        @include fluid-text(24, 30);
+    }
+    @include mobile {
+        text-align: center;
+    }
 }
 .subtitle {
     @include fluid-text(22, 40);
@@ -52,7 +66,7 @@ body {
 .text {
     @include fluid-text(14, 18);
     color: var(--secondary-text);
-    line-height: 100%;
+    line-height: 120%;
 }
 .btn {
     display: inline-block;
@@ -88,5 +102,8 @@ body {
     &:active {
         background-color: var(--primary-red-disabled);
     }
+}
+.price {
+    background-color: #EAF3F5;
 }
 /*----------------------------------global--------------------------------*/

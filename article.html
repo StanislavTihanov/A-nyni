@@ -18,9 +18,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-  <link rel="stylesheet" href="./styles/critical.css">
-  <link rel="stylesheet" href="./styles/styles.css" media="print" onload="this.onload=null;this.media='all';">
-  <noscript><link rel="stylesheet" href="/styles/styles.css"></noscript>
+  <link rel="stylesheet" href="./styles/styles.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 
@@ -95,410 +93,142 @@
     </header>
 
     <main class="main">
-      <section class="main-section section">
+      <section class="main-section section main-section--art">
         <div class="main-section__content _container">
-          <div class="main-section__body">
-            <div class="main-section__info">
-              <div class="title">
-                <h1>Агентство нянь <br> в Москве</h1>
-              </div>
-              <div class="main-section__list">
-                <ul>
-                  <li>Подбор няни за 1 час</li>
-                  <li>Гарантия замены няни по договору</li>
-                  <li>База более чем из 10 000 проверенных нянь</li>
-                </ul>
-              </div>
-            </div>
-            <div class="main-section__image">
-              <picture>
-                <source media="(max-width: 390px)" srcset="images/main-section-img-m.webp">
-                <img src="images/main-section-img.webp" alt="img">
-              </picture>
-            </div>
+          <div class="breadcrumbs">
+            <ul class="breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="index.html" class="breadcrumbs__item_link">
+                  <span itemprop="name">Главная</span>
+                </a>
+                <meta itemprop="position" content="1"/>
+              </li>
+              <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="blog.html" class="breadcrumbs__item_link">
+                  <span itemprop="name">Блог</span>
+                </a>
+                <meta itemprop="position" content="2"/>
+              </li>
+              <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <span itemprop="name">Как выбрать няню с помощью агентства в Санкт-Петербурге?</span>
+                <meta itemprop="position" content="3"/>
+              </li>
+            </ul>
           </div>
-          <div class="main-section__form">
-            <form class="form" action="#!">
-              <div class="form__title">
-                <h3>Оставь заявку и <span>получи скидку 10%</span></h3>
-              </div>
-              <div class="form__label">
-                <input class="form__input _req _name" id="formName" type="text" name="text" placeholder="Ваше имя">
-                <input class="form__input _req _number" id="formNumber" type="text" name="number" placeholder="Ваш телефон">
-                <button class="form__button btn" type="submit">Получить скидку</button>
-              </div>
-              <div class="form__text">
-                <p>Нажимая на кнопку, вы соглашаетесь на обработку <a class="form__text-link" href="#!">персональных данных</a></p>
-              </div>
-            </form>
+          <div class="main-section__body">
+            <div class="title-secondary title-secondary--mod">
+              <h1>Как выбрать няню с помощью агентства в Санкт-Петербурге?</h1>
+            </div>
           </div>
         </div>
         <div class="main-section__bg _ibg">
-          <img src="images/main-section-bg.webp" alt="image">
+          <picture>
+            <source media="(max-width: 390px)" srcset="images/bg-mob3.webp">
+            <img src="images/bg.webp" alt="image">
+          </picture>
         </div>
       </section>
-
-      <section class="sec-services section">
-        <div class="sec-services__content _container">
-          <div class="sec-services__top">
-            <div class="subtitle">
-              <h2>Выберите подходящую услугу няни для ребенка</h2>
+       
+      <article class="article section">
+         <div class="article__content _container">
+            <div class="article__top">
+              <div class="feedback__date">
+                <time datetime="2025-04-18">18.04.2024</time>
+              </div>
+              <div class="article__top-inner">
+                <div class="blog__views">
+                  <img src="images/view.svg" alt="view icon">
+                  <span>10</span>
+                  <p>просмотров</p>
+                </div>
+                <div class="blog__views">
+                  <img src="images/time.svg" alt="view icon">
+                  <span>1</span>
+                  <p>минута</p>
+                </div>
+              </div>
             </div>
-            <div class="text">
+            <nav class="article__nav">
+              <div class="article__subtitle">
+                <h3>Содержание статьи</h3>
+              </div>
+              <ol start="1">
+                <li><a class="article__nav-link" href="#!">Пункт первый, default</a></li>
+                <li><a class="article__nav-link" href="#!">Пункт второй, hover</a></li>
+                <li><a class="article__nav-link" href="#!">Пункт третий, click</a></li>
+                <li><a class="article__nav-link" href="#!">Пункт четвертый, при условии 2х строк</a></li>
+                <li><a class="article__nav-link" href="#!">Если нужен подзаголовок</a>
+                  <ul>
+                    <li><a class="article__nav-link" href="#!">5.1. Подпункт 5.1</a></li>
+                    <li><a class="article__nav-link" href="#!">5.2. Подпункт 5.2</a></li>
+                  </ul>
+                </li>
+                <li><a class="article__nav-link" href="#!">Пункт шестой</a></li>
+              </ol>
+            </nav>
+            <div class="article__text">
+              <p>Если вы решились доверить своего ребёнка няне, мы с удовольствием поможем вам подобрать 
+                подходящую кандидатуру! Разумеется, отбор по профессиональным критериям и тщательную проверку 
+                мы возьмём на себя. Но чтобы максимально ускорить сроки подбора и получить в итоге в своё 
+                распоряжение идеальную нянюшку, рекомендуем нанимателям подготовиться к выбору. 
+                Ведь существуют вопросы, ответы на которые известны только вам:</p>
+            </div>
+            <div class="article__block">
+              <div class="article__block-image">
+                <img src="images/articles-block-img.png" alt="article image">
+              </div>
+              <div class="article__block-info">
+                <div class="article__subtitle">
+                  <h3>Какие конкретно обязанности вам нужно поручить будущей няне?</h3>
+                </div>
+                <div class="article__text">
+                  <p>
+                    Одно дело — просто встретить ребёнка из школы 1-2 раза в неделю и покормить обедом, 
+                    дожидаясь вас с работы; и совсем другое — быть неотлучно возле малыша. Какая именно 
+                    няня вам нужна — молодая девушка-бебиситтер или опытная гувернантка со знанием иностранных языков? 
+                    Чтобы понять это, постарайтесь описать желаемую «картинку» как можно конкретнее: ваша няня должна 
+                    гулять с ребёнком, готовить, помогать делать уроки и т. д. Наши менеджеры подберут нужных кандидатов, 
+                    исходя из этого списка, с учётом возраста вашего ребёнка, его характера, а также ваших особых пожеланий.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="article__title">
+              <h2>Размер бюджета, которым вы располагаете</h2>
+            </div>
+            <div class="article__text">
               <p>
-                Ознакомительный текст о коллекциях и композиции читаемый текст мешает 
-                сосредоточиться. <br> Lorem Ipsum используют потому, что тот обеспечивает 
-                более или менее стандартное
+                Увы, экономические реалии таковы, что уже не получится нанять, как в сказке о Мэри Поппинс, «самую-самую лучшую няню с самым-самым маленьким жалованьем». Как бы нам ни хотелось предоставить каждой семье по суперпрофессионалу, услуги элитных нянь стоят дороже, чем обычных подрабатывающих женщин с хорошим личным опытом (свои взрослые дети). К тому же, многое зависит от графика работы, с которым тоже нужно определиться заранее. Возможны самые разные варианты — несколько часов в день, 12/12, сутки/трое, няня с проживанием в семье на правах постоянного сотрудника (оплата услуг строится как по принципу почасовых выплат, так и на основе оклада с премиальными).
               </p>
             </div>
-          </div>
-          <div class="sec-services__cards">
-            <div class="card">
-             <div class="card__title">
-               <h3>Няня с проживанием</h3>
-             </div>
-             <div class="card__cost">
-               <span>30 000 ₽/мес</span>
-             </div>
-             <div class="card__img">
-              <img src="images/card-img1.webp" alt="card image">
-             </div>
-             <div class="card__list">
-               <ul>
-                 <li>Некоторая характеристика особенностей именно этиой няни</li>
-                 <li>Кормление и уход за ребенком</li>
-                 <li>Кормление и уход за ребенком</li>
-               </ul>
-             </div>
-             <div class="card__button">
-               <a class="btn btn-outline" href="#!">Заказать услугу</a>
-             </div>
-             <a class="card__link" href="#!">Подробнее</a>
+            <div class="article__subtitle">
+              <h3>Какой образ няни наиболее предпочтителен для вас и вашего ребенка?</h3>
             </div>
-            <div class="card">
-              <div class="card__title">
-                <h3>Няня с проживанием</h3>
-              </div>
-              <div class="card__cost">
-                <span>30 000 ₽/мес</span>
-              </div>
-              <div class="card__img">
-               <img src="images/card-img2.webp" alt="card image">
-              </div>
-              <div class="card__list">
-                <ul>
-                  <li>Некоторая характеристика особенностей именно этиой няни</li>
-                  <li>Кормление и уход за ребенком</li>
-                  <li>Кормление и уход за ребенком</li>
-                </ul>
-              </div>
-              <div class="card__button">
-                <a class="btn btn-outline" href="#!">Заказать услугу</a>
-              </div>
-              <a class="card__link" href="#!">Подробнее</a>
-            </div>
-            <div class="card">
-              <div class="card__title">
-                <h3>Няня с проживанием</h3>
-              </div>
-              <div class="card__cost">
-                <span>30 000 ₽/мес</span>
-              </div>
-              <div class="card__img">
-               <img src="images/card-img3.webp" alt="card image">
-              </div>
-              <div class="card__list">
-                <ul>
-                  <li>Некоторая характеристика особенностей именно этиой няни</li>
-                  <li>Кормление и уход за ребенком</li>
-                  <li>Кормление и уход за ребенком</li>
-                </ul>
-              </div>
-              <div class="card__button">
-                <a class="btn btn-outline" href="#!">Заказать услугу</a>
-              </div>
-              <a class="card__link" href="#!">Подробнее</a>
-            </div>
-            <button class="button-more">Показать еще</button>
-            <div class="card card--none">
-              <div class="card__title">
-                <h3>Няня с проживанием</h3>
-              </div>
-              <div class="card__cost">
-                <span>30 000 ₽/мес</span>
-              </div>
-              <div class="card__img">
-               <img src="images/card-img4.webp" alt="card image">
-              </div>
-              <div class="card__list">
-                <ul>
-                  <li>Некоторая характеристика особенностей именно этиой няни</li>
-                  <li>Кормление и уход за ребенком</li>
-                  <li>Кормление и уход за ребенком</li>
-                </ul>
-              </div>
-              <div class="card__button">
-                <a class="btn btn-outline" href="#!">Заказать услугу</a>
-              </div>
-              <a class="card__link" href="#!">Подробнее</a>
-            </div>
-            <div class="card card--none">
-              <div class="card__title">
-                <h3>Няня с проживанием</h3>
-              </div>
-              <div class="card__cost">
-                <span>30 000 ₽/мес</span>
-              </div>
-              <div class="card__img">
-               <img src="images/card-img5.webp" alt="card image">
-              </div>
-              <div class="card__list">
-                <ul>
-                  <li>Некоторая характеристика особенностей именно этиой няни</li>
-                  <li>Кормление и уход за ребенком</li>
-                  <li>Кормление и уход за ребенком</li>
-                </ul>
-              </div>
-              <div class="card__button">
-                <a class="btn btn-outline" href="#!">Заказать услугу</a>
-              </div>
-              <a class="card__link" href="#!">Подробнее</a>
-            </div>
-            <div class="card card--none">
-              <div class="card__title">
-                <h3>Няня с проживанием</h3>
-              </div>
-              <div class="card__cost">
-                <span>30 000 ₽/мес</span>
-              </div>
-              <div class="card__img">
-               <img src="images/card-img6.webp" alt="card image">
-              </div>
-              <div class="card__list">
-                <ul>
-                  <li>Некоторая характеристика особенностей именно этиой няни</li>
-                  <li>Кормление и уход за ребенком</li>
-                  <li>Кормление и уход за ребенком</li>
-                </ul>
-              </div>
-              <div class="card__button">
-                <a class="btn btn-outline" href="#!">Заказать услугу</a>
-              </div>
-              <a class="card__link" href="#!">Подробнее</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="advantages section">
-        <div class="advantages__content _container">
-          <div class="subtitle">
-            <h2>Почему стоит работать с агентством «А-Няня»</h2>
-          </div>
-          <div class="advantages__blocks">
-           <div class="advantages__block">
-             <div class="advantages__block-img">
-               <img src="images/advantages-img1.webp" alt="img">
-             </div>
-             <div class="advantages__block-inner">
-              <div class="advantages__block-title">
-                <h3>Официально</h3>
-              </div>
-              <div class="advantages__block-text">
-                <p>Работаем по официальному договору</p>
-              </div>
-             </div>
-           </div>
-           <div class="advantages__block">
-            <div class="advantages__block-img">
-              <img src="images/advantages-img2.webp" alt="img">
-            </div>
-            <div class="advantages__block-inner">
-              <div class="advantages__block-title">
-                <h3>Уверенность</h3>
-              </div>
-              <div class="advantages__block-text">
-                <p>Проверка няни на финансовую чистоту</p>
-              </div>
-            </div>
-          </div>
-          <div class="advantages__block">
-            <div class="advantages__block-img">
-              <img src="images/advantages-img3.webp" alt="img">
-            </div>
-            <div class="advantages__block-inner">
-              <div class="advantages__block-title">
-                <h3>Скорость</h3>
-              </div>
-              <div class="advantages__block-text">
-                <p>Подбор няниза 1 час</p>
-              </div>
-            </div>
-          </div>
-          <div class="advantages__block">
-            <div class="advantages__block-img">
-              <img src="images/advantages-img4.webp" alt="img">
-            </div>
-            <div class="advantages__block-inner">
-              <div class="advantages__block-title">
-                <h3>Выбор</h3>
-              </div>
-              <div class="advantages__block-text">
-                <p>Более 5 000 нянь в обновляемой базе</p>
-              </div>
-            </div>
-          </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="reviews section">
-        <div class="reviews__content _container">
-          <div class="reviews__top">
-            <div class="subtitle">
-              <h2>Отзывы наших клиентов</h2>
-            </div>
-            <div class="reviews__buttons">
-              <a class="btn btn-filled" href="#!" aria-label="Все отзывы">Все отзывы</a>
-              <div class="swiper-button-prev button-prev"></div>
-              <div class="swiper-button-next button-next"></div>
-            </div>
-          </div>
-          <div class="reviews-slider">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <blockquote class="blockquote">
-                  <div class="blockquote__name">
-                    <cite>Марина Иванова</cite>
-                  </div>
-                  <div class="blockquote__text">
-                    <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.</p>
-                  </div>
-                  <a class="blockquote__link popup-link" href="#popup">Показать полностью</a>
-                  <div class="blockquote__date">
-                    <time datetime="2024-11-22">22.11.2024</time>
-                  </div>
-                </blockquote>
-              </div>
-              <div class="swiper-slide">
-                <blockquote class="blockquote">
-                  <div class="blockquote__name">
-                    <cite>Марина Иванова</cite>
-                  </div>
-                  <div class="blockquote__text">
-                    <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.</p>
-                  </div>
-                  <a class="blockquote__link popup-link" href="#popup">Показать полностью</a>
-                  <div class="blockquote__date">
-                    <time datetime="2024-11-22">22.11.2024</time>
-                  </div>
-                </blockquote>
-              </div>
-              <div class="swiper-slide">
-                <blockquote class="blockquote">
-                  <div class="blockquote__name">
-                    <cite>Марина Иванова</cite>
-                  </div>
-                  <div class="blockquote__text">
-                    <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.</p>
-                  </div>
-                  <a class="blockquote__link popup-link" href="#popup">Показать полностью</a>
-                  <div class="blockquote__date">
-                    <time datetime="2024-11-22">22.11.2024</time>
-                  </div>
-                </blockquote>
-              </div>
-              <div class="swiper-slide">
-                <blockquote class="blockquote">
-                  <div class="blockquote__name">
-                    <cite>Марина Иванова</cite>
-                  </div>
-                  <div class="blockquote__text">
-                    <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.</p>
-                  </div>
-                  <a class="blockquote__link popup-link" href="#popup">Показать полностью</a>
-                  <div class="blockquote__date">
-                    <time datetime="2024-11-22">22.11.2024</time>
-                  </div>
-                </blockquote>
-              </div>
-              <div class="swiper-slide">
-                <blockquote class="blockquote">
-                  <div class="blockquote__name">
-                    <cite>Марина Иванова</cite>
-                  </div>
-                  <div class="blockquote__text">
-                    <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.</p>
-                  </div>
-                  <a class="blockquote__link popup-link" href="#popup">Показать полностью</a>
-                  <div class="blockquote__date">
-                    <time datetime="2024-11-22">22.11.2024</time>
-                  </div>
-                </blockquote>
-              </div>
-              <div class="swiper-slide">
-                <blockquote class="blockquote">
-                  <div class="blockquote__name">
-                    <cite>Марина Иванова</cite>
-                  </div>
-                  <div class="blockquote__text">
-                    <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.</p>
-                  </div>
-                  <a class="blockquote__link popup-link" href="#popup">Показать полностью</a>
-                  <div class="blockquote__date">
-                    <time datetime="2024-11-22">22.11.2024</time>
-                  </div>
-                </blockquote>
-              </div>
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="sec-texts section">
-        <div class="sec-texts__content _container">
-           <div class="sec-texts__top">
-            <div class="subtitle">
-              <h2>Текст 2</h2>
-            </div>
-            <div class="text">
+            <div class="article__text">
               <p>
-                Это разработка комплекса правовых норм, определяющих стандарты условий труда и их нормативы, которые будут безопасны для здоровья и жизни людей, а также разработка правовых механизмов, позволяющих обеспечить выполнение данных стандартов и соблюдение нормативов.
+                Возраст, образование, личные качества… все это особенно важно для подбора няни. А может быть, вы хотите найти для своего сына гувернёра-мужчину? Помните, что ребёнок, с его интенсивно формирующейся картиной мира, буквально «губкой» впитывает любую информацию, и окружающие его люди должны способствовать гармоничному развитию и взрослению. Именно поэтому агентство нянь «Ваша няня» при наборе персонала отдаёт предпочтение кандидатам с педагогическим, медицинским, гуманитарным, музыкальным образованием. Разумеется, помочь младшему школьнику с уроками сумеет не только учительница, но есть наниматели, для которых данный вопрос принципиален.
               </p>
             </div>
-           </div>
-          <div class="sec-texts__list">
-            <div class="sec-texts__list-title">
-              <h3>К НПА в сфере охраны труда, которые содержат требования нормативного характера, относятся:</h3>
-            </div>
-            <div class="text-container">
+            <div class="article__text">
               <p>
-                <ol>
-                  <li>стандарты безопасности труда;</li>
-                  <li>типовые инструкции;</li>
-                  <li>правила по охране труда;</li>
-                  <li>СП и нормативы:</li>
-                      <div class="sec-texts__sublist">
-                        <ul>
-                          <li>СанПиН;</li>
-                          <li>Cанитарные нормы;</li>
-                          <li>СП и гигиенические нормативы, которые касаются факторов производственной среды и рабочих процессов.</li>
-                        </ul>
-                      </div>
-                      <input type="checkbox" id="toggle-list" class="toggle-input">
-                      <span class="hidden-text">
-                          <li>стандарты безопасности труда;</li>
-                          <li>типовые инструкции;</li>
-                          <li>правила по охране труда;</li>
-                      </span>
-                    <label for="toggle-list" class="toggle-label"></label>
-                </ol>
+                Что самое важное для вашей семьи: приятная внешность, строгий подход с мягким, но требовательным акцентом на дисциплине, весёлый и лёгкий нрав, общительность, трудолюбие? Вас интересует аналогичный опыт работы — или достаточно воспитания собственных детей или трудового стажа в детском саду, оздоровительном лагере? Важна каждая мелочь, и чем тщательнее вы обдумаете свой заказ, тем точнее он будет исполнен.
               </p>
             </div>
-          </div>
-        </div>
-      </section>
+            <div class="article__text">
+              <p>
+                Продумав все перечисленные выше моменты, и возможно даже записав какие-то тезисы в блокнот, можете смело звонить нам! Отчётливое понимание того, кого же вы, собственно, ищете, существенно упрощает поиски. Менеджеры агентства нянь «Ваша няня» будут чётко представлять, кто из кандидатов вам подойдёт, — и сделают за вас качественный подбор няни в кратчайшие сроки.
+              </p>
+            </div>
+            <div class="blog__top">
+              <div class="blog__top-tag">
+                <p>Тег статьи 1</p>
+              </div>
+              <div class="blog__top-tag">
+                <p>Тег статьи 1, при наведении</p>
+              </div>
+            </div>
+         </div>
+      </article>
 
       <section class="articles section">
         <div class="articles__content _container">
@@ -865,25 +595,30 @@
         </div>
       </section>
 
-      <section class="map section">
-        <div class="map__content _container">
-          <div class="map__form">
+      <section class="price section">
+        <div class="price__content _container">
+           <div class="price__form">
             <form class="form" action="#!">
               <div class="form__title">
-                <h3>Мы вам перезвоним</h3>
+                <h3>Оставь заявку и <span>получи скидку 10%</span></h3>
               </div>
               <div class="form__label">
                 <input class="form__input _req _name" id="formName" type="text" name="text" placeholder="Ваше имя">
                 <input class="form__input _req _number" id="formNumber" type="text" name="number" placeholder="Ваш телефон">
-                <div class="form__text">
-                  <p>Нажимая на кнопку, вы соглашаетесь на обработку <a class="form__text-link" href="#!">персональных данных</a></p>
-                </div>
-                <button class="form__button btn" type="submit">Перезвоните мне</button>
+                <button class="form__button btn" type="submit">Получить скидку</button>
+              </div>
+              <div class="form__text">
+                <p>Нажимая на кнопку, вы соглашаетесь на обработку <a class="form__text-link" href="#!">персональных данных</a></p>
               </div>
             </form>
-          </div>
+           </div>
         </div>
-        <div class="map__body _ibg">
+      </section>
+
+      <section class="map map--mod section">
+        <div class="map__content _container">
+        </div>
+        <div class="map__img">
           <picture>
             <source media="(max-width: 390px)" srcset="images/map-mob.webp">
             <img src="images/map.webp" alt="map" loading="lazy">
@@ -891,81 +626,6 @@
         </div>
       </section>
     </main>
-
-    <div class="popup" id="popup">
-      <div class="popup__body">
-        <div class="popup__content">
-          <a class="popup__close close-popup" href="#header">+</a>
-          <div class="popup-slider">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <blockquote class="blockquote">
-                  <div class="blockquote__name">
-                    <cite>Марина Иванова</cite>
-                  </div>
-                  <div class="blockquote__text">
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur. Suspendisse iaculis fames ut ultrices eu hendrerit etiam. 
-                      Montes id placerat sapien tincidunt id. Vel massa scelerisque purus in a rhoncus nunc. 
-                      Mi morbi odio ullamcorper tincidunt nibh scelerisque sagittis nunc tincidunt. Ipsum hac 
-                      viverra tincidunt viverra et sapien. Porta tincidunt egestas tempor id. In at lacus integer amet tincidunt. Nibh velit non eleifend vel id. 
-                      Feugiat quis sed aliquam eros in arcu nisi augue purus feugiat enim est tempus pulvinar.
-                    </p>
-                  </div>
-                  <div class="blockquote__date">
-                    <time datetime="2024-11-22">22.11.2024</time>
-                  </div>
-                </blockquote>
-              </div>
-              <div class="swiper-slide">
-                <blockquote class="blockquote">
-                  <div class="blockquote__name">
-                    <cite>Марина Иванова</cite>
-                  </div>
-                  <div class="blockquote__text">
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur. Suspendisse iaculis fames ut ultrices eu hendrerit etiam. 
-                      Montes id placerat sapien tincidunt id. Vel massa scelerisque purus in a rhoncus nunc. 
-                      Mi morbi odio ullamcorper tincidunt nibh scelerisque sagittis nunc tincidunt. Ipsum hac 
-                      viverra tincidunt viverra et sapien. Porta tincidunt egestas tempor id. In at lacus integer amet tincidunt. Nibh velit non eleifend vel id. 
-                      Feugiat quis sed aliquam eros in arcu nisi augue purus feugiat enim est tempus pulvinar.
-                    </p>
-                  </div>
-                  <div class="blockquote__date">
-                    <time datetime="2024-11-22">22.11.2024</time>
-                  </div>
-                </blockquote>
-              </div>
-              <div class="swiper-slide">
-                <blockquote class="blockquote">
-                  <div class="blockquote__name">
-                    <cite>Марина Иванова</cite>
-                  </div>
-                  <div class="blockquote__text">
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur. Suspendisse iaculis fames ut ultrices eu hendrerit etiam. 
-                      Montes id placerat sapien tincidunt id. Vel massa scelerisque purus in a rhoncus nunc. 
-                      Mi morbi odio ullamcorper tincidunt nibh scelerisque sagittis nunc tincidunt. Ipsum hac 
-                      viverra tincidunt viverra et sapien. Porta tincidunt egestas tempor id. In at lacus integer amet tincidunt. Nibh velit non eleifend vel id. 
-                      Feugiat quis sed aliquam eros in arcu nisi augue purus feugiat enim est tempus pulvinar.
-                    </p>
-                  </div>
-                  <div class="blockquote__date">
-                    <time datetime="2024-11-22">22.11.2024</time>
-                  </div>
-                </blockquote>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-button-prev swiper-prev-popup"></div>
-          <div class="popup__button">
-            <a class="btn btn-outline" href="#!">Перейти ко всем отзывам</a>
-          </div>
-          <div class="swiper-button-next swiper-next-popup"></div>
-        </div>
-      </div>
-    </div>
-
 
     <footer class="footer">
       <div class="footer__content">

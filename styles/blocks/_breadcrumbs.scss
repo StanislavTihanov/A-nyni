@@ -1,11 +1,17 @@
 /*----------------------------------breadcrumbs--------------------------------*/
 .breadcrumbs {
-    margin-bottom: 50px;
+    margin-bottom: 3rem;
+    @include mobile {
+        margin-bottom: 2rem;
+    }
     &__list {
         display: flex;
         align-items: center;
-        gap: 5px 15px;
+        gap: 5px 7px;
         flex-wrap: wrap;
+        @include mobile {
+            justify-content: center;
+        }
     }
     &__item:not(:last-child){
         position: relative;
@@ -14,21 +20,22 @@
     &__item:not(:last-child)::after {
         position: absolute;
         content: '';
-        width: 5px;
-        height: 5px;
-        top: 5px;
+        width: 15px;
+        height: 2px;
+        top: 50%;
         right: 0;
         border-radius: 1px;
-        background: rgb(155, 155, 155);
-        transform: rotate(45deg);
+        background: #969696;
     }
     &__item {
-        font-size: 12px;
         line-height: 15px;
-        font-size: 12px;
-        color: rgb(155, 155, 155);
-        &_link:hover {
-            color: var(--color-blue);
+        @include fluid-text(14, 16);
+        color: #969696;
+        &:last-child {
+            color: #24A7D6;
+        }
+        @include mobile {
+            text-align: center;
         }
     }
 }

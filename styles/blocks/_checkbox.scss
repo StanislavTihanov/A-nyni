@@ -1,6 +1,6 @@
 /*----------------------------------checkbox--------------------------------*/
 .checkbox {
-    display: inline-block;
+    background-color: inherit;
     &._error .checkbox__label::before {
         border: 1px solid red;
     }
@@ -11,14 +11,13 @@
         }
     }
     &__label {
-        @include fluid-text(12, 14);
-        line-height: 140%;
+        font-size: 13px;
+        line-height: 120%;
         display: inline-flex;
         align-items: center;
         width: 100%;
         position: relative;
         cursor: pointer;
-        
         &__text {
             display: flex;
             justify-content: space-between;
@@ -32,23 +31,28 @@
             flex: 0 0 16px;
             height: 16px;
             margin-right: 0.5rem;
-            border: 1px solid #c4c4c4;
-            border-radius: 2px;
+            border: 1px solid var(--primary-blue);
+            border-radius: 4px;
             background: #fff;
             position: relative;
+            top: -1px;
         }
         &::after {
             content: '';
             position: absolute;
             width: 6px;
             height: 12px;
-            border: solid violet;
+            border: solid var(--primary-blue);
             border-width: 0 2px 2px 0;
-            top: 0;
+            top: -1px;
             left: 5px;
             transform: rotate(45deg) scale(0);
             transition: transform 0.2s ease-in-out;
         }
+    }
+    &__link {
+        display: inline-block;
+        text-decoration: underline dotted;
     }
 }
 

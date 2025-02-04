@@ -3,7 +3,7 @@
     margin-top: 7rem;
     position: relative;
     @include table {
-        padding: 9rem 0rem;
+        margin-top: 13.5rem;
     }
     &__content {
         position: relative;
@@ -12,6 +12,8 @@
             margin-bottom: 2rem;
             @include mobile {
                 text-align: center;
+                margin: auto;
+                margin-bottom: 2.5rem;
             }
         }
     }
@@ -56,6 +58,12 @@
             margin-bottom: -6.5rem;
         }
     }
+    &__image--mod {
+        margin-bottom: -8rem;
+        @include mobile {
+            margin-bottom: -6.5rem;
+        }
+    }
     &__form {
         margin-bottom: -5rem;
         @include table {
@@ -68,6 +76,22 @@
         height: 100%;
         top: 0;
         left: 0;
+    }
+    &--mod {
+        @include mobile {
+            padding-bottom: 22rem;
+        }
+    }
+    &--m {
+        @include mobile {
+            padding-bottom: 12rem;
+        }
+
+    }
+    &--art {
+        @include mobile {
+            padding-bottom: 2rem;
+        }
     }
 }
 

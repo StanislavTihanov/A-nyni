@@ -1,0 +1,77 @@
+/*---------------------------------------contacts----------------------------*/
+
+.contacts {
+    @include mobile {
+        text-align: center;
+        margin-top: -22rem;
+        position: relative;
+    }
+    z-index: 9;
+    &__content {
+        .subtitle {
+            margin-bottom: 1.3rem;
+            @include mobile {
+                text-align: center;
+            }
+        }
+    }
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        @include mobile {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    &__info {
+        @include mobile {
+            margin-bottom: 3rem;
+        }
+    }
+    &__block {
+        display: grid;
+        grid-template-columns: 8rem 1fr;
+        margin-bottom: 1.25rem;
+        @include mobile {
+            display: block;
+            text-align: center;
+        }
+        &-phone {
+            font-weight: 500;
+            @include fluid-text(16, 17);
+        }
+        &-email {
+            font-weight: 500;
+            @include fluid-text(16, 17);
+            text-decoration: underline;
+            color: var(--primary-blue);
+        }
+    }
+
+    &__block-title {
+        font-weight: 700;
+        @include fluid-text(16, 18);
+        color: #1d1d1d;
+        @include mobile {
+            margin-bottom: 1rem;
+        }
+    }
+    &__form {
+        flex-basis: 41rem;
+        .form {
+            padding: 0;
+            background-color: inherit;
+            box-shadow: none;
+            &__title {
+                display: flex;
+                align-items: center;
+                gap: 0.625rem;
+                @include fluid-text(16, 18);
+            }
+        }
+        
+    }
+}
+
+/*---------------------------------------contacts----------------------------*/

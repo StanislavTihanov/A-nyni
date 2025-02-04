@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="эталон">
+  <meta name="keywords" content="эталон">
+  <meta property="og:title" content="эталон">
+  <meta property="og:url" content="ссылка на сайт">
+  <meta property="og:image:width" content="1000">
+  <meta property="og:image:height" content="500">
+  <meta property="og:description" content="эталон">
+  <meta property="og:image" content="путь к картинке/image.webp">
+  <title>Эталон</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+
+<body id="body">
+  <div class="wrapper">
+    <header class="header lock-padding">
+      <div class="header__content">
+        <div class="header__inner">
+          <div class="header__body _container">
+            <div class="header__wrapper">
+              <a class="header__logo" href="index.html" aria-label="логотип">
+                <img src="images/logo.svg" alt="logo">
+              </a>
+              <div class="burger" id="hamb" aria-label="кнопка открытия меню">
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+              </div>
+              <div class="header__box">
+                <p class="header__box-city">
+                  <img src="images/header-arrow.svg" width="19" height="19" alt="arrow">
+                  <span>г. Сочи</span>
+                </p>
+                <div class="header__box-text">
+                  <address>ул. Видова, дом 4</address>
+                </div>
+              </div>
+            </div>
+            <div class="header__wrapper header__wrapper--mod">
+              <div class="header__box header__box--mod">
+                <a class="header__box-link" href="tel:+79291234567">
+                  <img src="images/phone-icon.svg" width="22" height="22" alt="Телефон">
+                  +7 (929) 123-45-67
+                </a>
+                <div class="header__box-text">
+                  <span>Работаем с 9:00 до 21:00</span>
+                </div>
+              </div>
+              <div class="header__messengers">
+                <a href="#!" title="Написать в WhatsApp"><img src="images/Icon-wp.svg" alt="WhatsApp"></a>
+                <a href="#!" title="Написать в Telegram"><img src="images/Icon-tg.svg" alt="Telegram"></a>                
+              </div>
+              <div class="header__callback">
+                <a class="btn btn-filled" href="#!" aria-label="Заказать обратный звонок">Обратный звонок</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav class="menu _container" id="menu">
+          <ul>
+            <li>
+              <a class="menu__link" href="services.html">Каталог услуг</a>
+            </li>
+            <li>
+              <a class="menu__link" href="index.html">Главная</a>
+            </li>
+            <li>
+              <a class="menu__link" href="price.html">Стоимость</a>
+            </li>
+            <li>
+              <a class="menu__link" href="blog.html">Блог</a>
+            </li>
+            <li>
+              <a class="menu__link" href="reviews.html">Отзывы</a>
+            </li>
+            <li>
+              <a class="menu__link" href="contacts.html">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="main-section section main-section--art">
+        <div class="main-section__content _container">
+          <div class="breadcrumbs">
+            <ul class="breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="index.html" class="breadcrumbs__item_link">
+                  <span itemprop="name">Главная</span>
+                </a>
+                <meta itemprop="position" content="1"/>
+              </li>
+              <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <span itemprop="name">Отзывы</span>
+                <meta itemprop="position" content="2"/>
+              </li>
+            </ul>
+          </div>
+          <div class="main-section__body">
+            <div class="title-secondary">
+              <h1>Блог</h1>
+            </div>
+          </div>
+        </div>
+        <div class="main-section__bg _ibg">
+          <picture>
+            <source media="(max-width: 390px)" srcset="images/bg-mob4.webp">
+            <img src="images/bg.webp" alt="image">
+          </picture>
+        </div>
+      </section>
+
+      <section class="blog section">
+        <div class="blog__content _container">
+          <div class="text-container text-container--mod">
+            <p>
+              <blockquote class="blog__item">
+                <div class="blog__img">
+                  <picture>
+                    <source media="(max-width: 764px)" srcset="images/blog-img-mob.webp">
+                    <img src="images/blog-img.webp" alt="blog img">
+                  </picture>
+                </div>
+                <div class="blog__info">
+                  <div class="blog__top">
+                    <div class="blog__top-tag">
+                      <p>Тег статьи 1</p>
+                    </div>
+                    <div class="blog__top-tag">
+                      <p>Тег статьи 1, при наведении</p>
+                    </div>
+                  </div>
+                  <div class="blog__tile">
+                    <cite>Как избавится от острой зубной боли?</cite>
+                  </div>
+                  <div class="blog__text">
+                    <p>
+                      Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. 
+                      Lorem Ipsum используют потому, что тот обеспечивает более или менее..  
+                      <a href="article.html" class="blog__text-link">Читать далее</a>
+                    </p>
+                  </div>
+                  <div class="blog__bottom">
+                    <div class="feedback__date">
+                      <time datetime="2025-04-18">18.04.2024</time>
+                    </div>
+                    <div class="blog__views">
+                      <img src="images/view.svg" alt="view icon">
+                      <span>10</span>
+                      <p>просмотров</p>
+                    </div>
+                  </div>
+                </div>
+              </blockquote>
+              <blockquote class="blog__item">
+                <div class="blog__img">
+                  <picture>
+                    <source media="(max-width: 764px)" srcset="images/blog-img-mob.webp">
+                    <img src="images/blog-img.webp" alt="blog img">
+                  </picture>
+                </div>
+                <div class="blog__info">
+                  <div class="blog__top">
+                    <div class="blog__top-tag">
+                      <p>Тег статьи 1</p>
+                    </div>
+                    <div class="blog__top-tag">
+                      <p>Тег статьи 1, при наведении</p>
+                    </div>
+                  </div>
+                  <div class="blog__tile">
+                    <cite>Как избавится от острой зубной боли?</cite>
+                  </div>
+                  <div class="blog__text">
+                    <p>
+                      Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. 
+                      Lorem Ipsum используют потому, что тот обеспечивает более или менее..  
+                      <a href="article.html" class="blog__text-link">Читать далее</a>
+                    </p>
+                  </div>
+                  <div class="blog__bottom">
+                    <div class="feedback__date">
+                      <time datetime="2025-04-18">18.04.2024</time>
+                    </div>
+                    <div class="blog__views">
+                      <img src="images/view.svg" alt="view icon">
+                      <span>10</span>
+                      <p>просмотров</p>
+                    </div>
+                  </div>
+                </div>
+              </blockquote>
+              <blockquote class="blog__item">
+                <div class="blog__img">
+                  <picture>
+                    <source media="(max-width: 764px)" srcset="images/blog-img-mob.webp">
+                    <img src="images/blog-img.webp" alt="blog img">
+                  </picture>
+                </div>
+                <div class="blog__info">
+                  <div class="blog__top">
+                    <div class="blog__top-tag">
+                      <p>Тег статьи 1</p>
+                    </div>
+                    <div class="blog__top-tag">
+                      <p>Тег статьи 1, при наведении</p>
+                    </div>
+                  </div>
+                  <div class="blog__tile">
+                    <cite>Как избавится от острой зубной боли?</cite>
+                  </div>
+                  <div class="blog__text">
+                    <p>
+                      Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. 
+                      Lorem Ipsum используют потому, что тот обеспечивает более или менее..  
+                      <a href="article.html" class="blog__text-link">Читать далее</a>
+                    </p>
+                  </div>
+                  <div class="blog__bottom">
+                    <div class="feedback__date">
+                      <time datetime="2025-04-18">18.04.2024</time>
+                    </div>
+                    <div class="blog__views">
+                      <img src="images/view.svg" alt="view icon">
+                      <span>10</span>
+                      <p>просмотров</p>
+                    </div>
+                  </div>
+                </div>
+              </blockquote>
+              <blockquote class="blog__item">
+                <div class="blog__img">
+                  <picture>
+                    <source media="(max-width: 764px)" srcset="images/blog-img-mob.webp">
+                    <img src="images/blog-img.webp" alt="blog img">
+                  </picture>
+                </div>
+                <div class="blog__info">
+                  <div class="blog__top">
+                    <div class="blog__top-tag">
+                      <p>Тег статьи 1</p>
+                    </div>
+                    <div class="blog__top-tag">
+                      <p>Тег статьи 1, при наведении</p>
+                    </div>
+                  </div>
+                  <div class="blog__tile">
+                    <cite>Как избавится от острой зубной боли?</cite>
+                  </div>
+                  <div class="blog__text">
+                    <p>
+                      Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. 
+                      Lorem Ipsum используют потому, что тот обеспечивает более или менее..  
+                      <a href="article.html" class="blog__text-link">Читать далее</a>
+                    </p>
+                  </div>
+                  <div class="blog__bottom">
+                    <div class="feedback__date">
+                      <time datetime="2025-04-18">18.04.2024</time>
+                    </div>
+                    <div class="blog__views">
+                      <img src="images/view.svg" alt="view icon">
+                      <span>10</span>
+                      <p>просмотров</p>
+                    </div>
+                  </div>
+                </div>
+              </blockquote>
+              <blockquote class="blog__item">
+                <div class="blog__img">
+                  <picture>
+                    <source media="(max-width: 764px)" srcset="images/blog-img-mob.webp">
+                    <img src="images/blog-img.webp" alt="blog img">
+                  </picture>
+                </div>
+                <div class="blog__info">
+                  <div class="blog__top">
+                    <div class="blog__top-tag">
+                      <p>Тег статьи 1</p>
+                    </div>
+                    <div class="blog__top-tag">
+                      <p>Тег статьи 1, при наведении</p>
+                    </div>
+                  </div>
+                  <div class="blog__tile">
+                    <cite>Как избавится от острой зубной боли?</cite>
+                  </div>
+                  <div class="blog__text">
+                    <p>
+                      Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. 
+                      Lorem Ipsum используют потому, что тот обеспечивает более или менее..  
+                      <a href="article.html" class="blog__text-link">Читать далее</a>
+                    </p>
+                  </div>
+                  <div class="blog__bottom">
+                    <div class="feedback__date">
+                      <time datetime="2025-04-18">18.04.2024</time>
+                    </div>
+                    <div class="blog__views">
+                      <img src="images/view.svg" alt="view icon">
+                      <span>10</span>
+                      <p>просмотров</p>
+                    </div>
+                  </div>
+                </div>
+              </blockquote>
+              <blockquote class="blog__item">
+                <div class="blog__img">
+                  <picture>
+                    <source media="(max-width: 764px)" srcset="images/blog-img-mob.webp">
+                    <img src="images/blog-img.webp" alt="blog img">
+                  </picture>
+                </div>
+                <div class="blog__info">
+                  <div class="blog__top">
+                    <div class="blog__top-tag">
+                      <p>Тег статьи 1</p>
+                    </div>
+                    <div class="blog__top-tag">
+                      <p>Тег статьи 1, при наведении</p>
+                    </div>
+                  </div>
+                  <div class="blog__tile">
+                    <cite>Как избавится от острой зубной боли?</cite>
+                  </div>
+                  <div class="blog__text">
+                    <p>
+                      Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. 
+                      Lorem Ipsum используют потому, что тот обеспечивает более или менее..  
+                      <a href="article.html" class="blog__text-link">Читать далее</a>
+                    </p>
+                  </div>
+                  <div class="blog__bottom">
+                    <div class="feedback__date">
+                      <time datetime="2025-04-18">18.04.2024</time>
+                    </div>
+                    <div class="blog__views">
+                      <img src="images/view.svg" alt="view icon">
+                      <span>10</span>
+                      <p>просмотров</p>
+                    </div>
+                  </div>
+                </div>
+              </blockquote>
+                <input type="checkbox" id="toggle" class="toggle-input">
+                <span class="hidden-text">
+                  <blockquote class="blog__item">
+                    <div class="blog__img">
+                      <picture>
+                        <source media="(max-width: 764px)" srcset="images/blog-img-mob.webp">
+                        <img src="images/blog-img.webp" alt="blog img">
+                      </picture>
+                    </div>
+                    <div class="blog__info">
+                      <div class="blog__top">
+                        <div class="blog__top-tag">
+                          <p>Тег статьи 1</p>
+                        </div>
+                        <div class="blog__top-tag">
+                          <p>Тег статьи 1, при наведении</p>
+                        </div>
+                      </div>
+                      <div class="blog__tile">
+                        <cite>Как избавится от острой зубной боли?</cite>
+                      </div>
+                      <div class="blog__text">
+                        <p>
+                          Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. 
+                          Lorem Ipsum используют потому, что тот обеспечивает более или менее..  
+                          <a href="article.html" class="blog__text-link">Читать далее</a>
+                        </p>
+                      </div>
+                      <div class="blog__bottom">
+                        <div class="feedback__date">
+                          <time datetime="2025-04-18">18.04.2024</time>
+                        </div>
+                        <div class="blog__views">
+                          <img src="images/view.svg" alt="view icon">
+                          <span>10</span>
+                          <p>просмотров</p>
+                        </div>
+                      </div>
+                    </div>
+                  </blockquote>
+                  <blockquote class="blog__item">
+                    <div class="blog__img">
+                      <picture>
+                        <source media="(max-width: 764px)" srcset="images/blog-img-mob.webp">
+                        <img src="images/blog-img.webp" alt="blog img">
+                      </picture>
+                    </div>
+                    <div class="blog__info">
+                      <div class="blog__top">
+                        <div class="blog__top-tag">
+                          <p>Тег статьи 1</p>
+                        </div>
+                        <div class="blog__top-tag">
+                          <p>Тег статьи 1, при наведении</p>
+                        </div>
+                      </div>
+                      <div class="blog__tile">
+                        <cite>Как избавится от острой зубной боли?</cite>
+                      </div>
+                      <div class="blog__text">
+                        <p>
+                          Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. 
+                          Lorem Ipsum используют потому, что тот обеспечивает более или менее..  
+                          <a href="article.html" class="blog__text-link">Читать далее</a>
+                        </p>
+                      </div>
+                      <div class="blog__bottom">
+                        <div class="feedback__date">
+                          <time datetime="2025-04-18">18.04.2024</time>
+                        </div>
+                        <div class="blog__views">
+                          <img src="images/view.svg" alt="view icon">
+                          <span>10</span>
+                          <p>просмотров</p>
+                        </div>
+                      </div>
+                    </div>
+                  </blockquote>
+                  <blockquote class="blog__item">
+                    <div class="blog__img">
+                      <picture>
+                        <source media="(max-width: 764px)" srcset="images/blog-img-mob.webp">
+                        <img src="images/blog-img.webp" alt="blog img">
+                      </picture>
+                    </div>
+                    <div class="blog__info">
+                      <div class="blog__top">
+                        <div class="blog__top-tag">
+                          <p>Тег статьи 1</p>
+                        </div>
+                        <div class="blog__top-tag">
+                          <p>Тег статьи 1, при наведении</p>
+                        </div>
+                      </div>
+                      <div class="blog__tile">
+                        <cite>Как избавится от острой зубной боли?</cite>
+                      </div>
+                      <div class="blog__text">
+                        <p>
+                          Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. 
+                          Lorem Ipsum используют потому, что тот обеспечивает более или менее..  
+                          <a href="article.html" class="blog__text-link">Читать далее</a>
+                        </p>
+                      </div>
+                      <div class="blog__bottom">
+                        <div class="feedback__date">
+                          <time datetime="2025-04-18">18.04.2024</time>
+                        </div>
+                        <div class="blog__views">
+                          <img src="images/view.svg" alt="view icon">
+                          <span>10</span>
+                          <p>просмотров</p>
+                        </div>
+                      </div>
+                    </div>
+                  </blockquote>
+                </span>
+                <label for="toggle" class="toggle-label"></label>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="price section">
+        <div class="price__content _container">
+           <div class="price__form">
+            <form class="form" action="#!">
+              <div class="form__title">
+                <h3>Оставь заявку и <span>получи скидку 10%</span></h3>
+              </div>
+              <div class="form__label">
+                <input class="form__input _req _name" id="formName" type="text" name="text" placeholder="Ваше имя">
+                <input class="form__input _req _number" id="formNumber" type="text" name="number" placeholder="Ваш телефон">
+                <button class="form__button btn" type="submit">Получить скидку</button>
+              </div>
+              <div class="form__text">
+                <p>Нажимая на кнопку, вы соглашаетесь на обработку <a class="form__text-link" href="#!">персональных данных</a></p>
+              </div>
+            </form>
+           </div>
+        </div>
+      </section>
+
+      <section class="map map--mod section">
+        <div class="map__content _container">
+        </div>
+        <div class="map__img">
+          <picture>
+            <source media="(max-width: 390px)" srcset="images/map-mob.webp">
+            <img src="images/map.webp" alt="map" loading="lazy">
+          </picture>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__content">
+        <div class="footer__body _container">
+          <div class="footer__block">
+            <a class="footer__logo" href="index.html">
+              <img src="images/logo.svg" alt="logo">
+            </a>
+            <a class="btn btn-outline" href="#!">Обратный звонок</a>
+          </div>
+          <div class="footer__wrapper">
+            <div class="footer__block">
+              <div class="footer__block-title">
+                <h3>О компании</h3>
+              </div>
+              <div class="footer__block-list">
+                <ul>
+                  <li>Главная страница</li>
+                  <li>Цены</li>
+                  <li>Отзывы</li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__block">
+              <div class="footer__block-title">
+                <h3>Услуги</h3>
+              </div>
+              <div class="footer__block-list">
+                <ul>
+                  <li>Няня для младенца 1</li>
+                  <li>Няня для младенца 2</li>
+                  <li>Контакты</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer__block">
+            <div class="footer__block-title">
+              <h3>Контакты</h3>
+            </div>
+            <div class="footer__contacts">
+              <div class="footer__contacts-address">
+                <span>Сочи</span>
+                <address>ул. С. Дерябиной, 32Б</address>
+              </div>
+              <a href="tel:+78000000000" class="footer__contacts-tel">8-800-000-00-00</a>
+              <div class="footer__messengers">
+                <a href="#!">
+                  <img src="images/Icon-vk.svg" alt="icon vk">
+                </a>
+                <a href="#!">
+                  <img src="images/Icon-wp.svg" alt="icon wp">
+                </a>
+                <a href="#!">
+                  <img src="images/Icon-tg.svg" alt="icon tg">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p>© 2025 Не является публичной офертой</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script defer src="https://unpkg.com/imask"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script defer src="js/main.js"></script>  
+</body>
+
+</html>

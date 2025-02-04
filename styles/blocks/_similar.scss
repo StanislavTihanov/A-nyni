@@ -1,0 +1,63 @@
+/*----------------------------------similar--------------------------------*/
+
+.similar {
+    &--mod {
+        display: none;
+        @include mobile {
+            display: block;
+        }
+        .card {
+            margin-bottom: 1.25rem;
+        }
+        .similar__content {
+            margin-bottom: 0rem;
+        }
+    }
+    &__text {
+        font-size: 13px;
+        line-height: 123%;
+        text-align: center;
+        color: #5E5E5E;
+        margin-bottom: 1rem;
+    }
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@include mobile {
+    .similar {
+        margin-bottom: 2rem;
+    }
+    .similar-slider {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1rem;
+      }
+    
+      .similar-slider .swiper-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+    
+      .similar-slider .swiper-slide {
+        width: 100% !important;
+        flex-shrink: 0;
+      }
+    
+      /* Отключаем swiper на мобильных */
+      .similar-slider .swiper-wrapper, .swiper-slide {
+        transform: none !important;
+      }
+      
+      .similar-slider .swiper-pagination {
+        display: none;
+      }
+      .similar-slider .swiper-slide--none {
+        display: none;
+      }
+}
+/*----------------------------------similar--------------------------------*/

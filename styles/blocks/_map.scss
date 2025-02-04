@@ -5,6 +5,9 @@
     @include mobile {
         padding-bottom: 16rem;
     }
+    &--mod {
+        padding: 0px;
+    }
     &__content {
         position: relative;
     }
@@ -43,23 +46,14 @@
             text-decoration: none;
         }
     }
-}
-
-.form {
-
-    &__title {
-    }
-
-
-    &__button {
-    }
-
-
-    &__text-link {
+    &__img {
+        img {
+            filter: grayscale(100%);
+            width: 100%;
+        }
     }
 }
-.btn {
-}
+
 
 
 /*---------------------------------------map----------------------------*/

@@ -1,5 +1,6 @@
 /*---------------------------------------articles----------------------------*/
 .articles {
+    background-color: #F8F8F8;
     @include mobile {
         margin-bottom: 3rem;
     }
@@ -55,6 +56,7 @@
         text-decoration: underline;
         text-underline-offset: 4px;
         transition: All 0.3s ease 0s;
+        display: inline-block;
         &:hover {
             color: var(--primary-blue);
         }
@@ -68,6 +70,12 @@
         .articles__info-title {
             @include fluid-text(18, 20);
             margin-bottom: 0.6rem;
+        }
+        &-img {
+            flex: none;
+            img {
+                border-radius: 8px;
+            }
         }
     }
 }

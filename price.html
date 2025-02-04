@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="эталон">
+  <meta name="keywords" content="эталон">
+  <meta property="og:title" content="эталон">
+  <meta property="og:url" content="ссылка на сайт">
+  <meta property="og:image:width" content="1000">
+  <meta property="og:image:height" content="500">
+  <meta property="og:description" content="эталон">
+  <meta property="og:image" content="путь к картинке/image.webp">
+  <title>Эталон</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+
+<body id="body">
+  <div class="wrapper">
+    <header class="header lock-padding">
+      <div class="header__content">
+        <div class="header__inner">
+          <div class="header__body _container">
+            <div class="header__wrapper">
+              <a class="header__logo" href="index.html" aria-label="логотип">
+                <img src="images/logo.svg" alt="logo">
+              </a>
+              <div class="burger" id="hamb" aria-label="кнопка открытия меню">
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+              </div>
+              <div class="header__box">
+                <p class="header__box-city">
+                  <img src="images/header-arrow.svg" width="19" height="19" alt="arrow">
+                  <span>г. Сочи</span>
+                </p>
+                <div class="header__box-text">
+                  <address>ул. Видова, дом 4</address>
+                </div>
+              </div>
+            </div>
+            <div class="header__wrapper header__wrapper--mod">
+              <div class="header__box header__box--mod">
+                <a class="header__box-link" href="tel:+79291234567">
+                  <img src="images/phone-icon.svg" width="22" height="22" alt="Телефон">
+                  +7 (929) 123-45-67
+                </a>
+                <div class="header__box-text">
+                  <span>Работаем с 9:00 до 21:00</span>
+                </div>
+              </div>
+              <div class="header__messengers">
+                <a href="#!" title="Написать в WhatsApp"><img src="images/Icon-wp.svg" alt="WhatsApp"></a>
+                <a href="#!" title="Написать в Telegram"><img src="images/Icon-tg.svg" alt="Telegram"></a>                
+              </div>
+              <div class="header__callback">
+                <a class="btn btn-filled" href="#!" aria-label="Заказать обратный звонок">Обратный звонок</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav class="menu _container" id="menu">
+          <ul>
+            <li>
+              <a class="menu__link" href="services.html">Каталог услуг</a>
+            </li>
+            <li>
+              <a class="menu__link" href="index.html">Главная</a>
+            </li>
+            <li>
+              <a class="menu__link" href="price.html">Стоимость</a>
+            </li>
+            <li>
+              <a class="menu__link" href="blog.html">Блог</a>
+            </li>
+            <li>
+              <a class="menu__link" href="reviews.html">Отзывы</a>
+            </li>
+            <li>
+              <a class="menu__link" href="contacts.html">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="main-section section main-section--mod">
+        <div class="main-section__content _container">
+          <div class="breadcrumbs">
+            <ul class="breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="index.html" class="breadcrumbs__item_link">
+                  <span itemprop="name">Главная</span>
+                </a>
+                <meta itemprop="position" content="1"/>
+              </li>
+              <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <span itemprop="name">Стоимость услуг нянь</span>
+                <meta itemprop="position" content="2"/>
+              </li>
+            </ul>
+          </div>
+          <div class="main-section__body">
+            <div class="title-secondary">
+              <h1>Стоимость услуг нянь</h1>
+            </div>
+          </div>
+        </div>
+        <div class="main-section__bg _ibg">
+          <picture>
+            <source media="(max-width: 390px)" srcset="images/bg-mob.webp">
+            <img src="images/bg.webp" alt="image">
+          </picture>
+        </div>
+      </section>
+
+      <section class="calculator section">
+        <div class="calculator__content calculator__content--mod _container">
+          <div class="subtitle">
+            <h2>Стоимость услуги</h2>
+          </div>
+          <div class="calculator__body">
+            <div class="calculator__info">
+              <div class="calculator__item">
+                <div class="calculator__item_title">
+                  <h3>1. Выберите нужную услугу:</h3>
+                </div>
+                <div class="dropdown">
+                  <button class="dropdown__button">Няня для малыша</button>
+                  <ul class="dropdown__list">
+                    <li class="dropdown__list-item" data-value="1">Няня для малыша</li>
+                    <li class="dropdown__list-item" data-value="2">Няня для малыша</li>
+                    <li class="dropdown__list-item" data-value="3">Няня для малыша</li>
+                    <li class="dropdown__list-item" data-value="4">Няня для малыша</li>
+                  </ul>
+                  <input type="text" name="select-category" value="" class="dropdown__input-hidden">
+                </div>
+              </div>
+              <div class="calculator__item">
+                <div class="calculator__item_title">
+                  <h3>2. Сколько времени должна работать няня?</h3>
+                </div>
+                <div class="calculator__item_inner">
+                  <div class="dropdown">
+                    <button class="dropdown__button">1 час</button>
+                    <ul class="dropdown__list">
+                      <li class="dropdown__list-item" data-value="1">1 часа</li>
+                      <li class="dropdown__list-item" data-value="2">2 часа</li>
+                      <li class="dropdown__list-item" data-value="3">3 часа</li>
+                      <li class="dropdown__list-item" data-value="4">4 часа</li>
+                    </ul>
+                    <input type="text" name="select-category" value="" class="dropdown__input-hidden">
+                  </div>
+                  <div class="dropdown">
+                    <button class="dropdown__button">1 день в неделю</button>
+                    <ul class="dropdown__list">
+                      <li class="dropdown__list-item" data-value="1">1 день в неделю</li>
+                      <li class="dropdown__list-item" data-value="2">2 дня в неделю</li>
+                      <li class="dropdown__list-item" data-value="3">3 дня в неделю</li>
+                      <li class="dropdown__list-item" data-value="4">4 дня в неделю</li>
+                    </ul>
+                    <input type="text" name="select-category" value="" class="dropdown__input-hidden">
+                  </div>
+                </div>
+              </div>
+              <div class="calculator__items">
+                <div class="calculator__item">
+                  <div class="calculator__item_cost">
+                    <span>от 30 000 ₽ </span>
+                  </div>
+                  <div class="calculator__item_title">
+                    <h3>Стоимость услуг няни в месяц</h3>
+                  </div>
+                </div>
+                <div class="calculator__item">
+                  <div class="calculator__item_cost">
+                    <span>от 400 ₽/час</span>
+                  </div>
+                  <div class="calculator__item_title">
+                    <h3>Стоимость работы в час</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="calculator__buttons">
+                <a href="#!" class="btn btn-filled">Заказать услугу</a>
+                <a href="#!" class="btn btn-outline">Получить консультацию</a>
+              </div>
+            </div>
+            <div class="calculator__block">
+             <div class="sec-texts__subtitle">
+               <h3>Подзаголовок</h3>
+             </div>
+             <div class="text">
+               <p>
+                 Сколько стоят услуги надёжной и ответственной няни? Расценки нашего агентства доступны даже 
+                 семье с небольшим доходом или одиноким родителям. Прочтите внимательно наш прайс, и  
+                 если вы хотите получить индивидуальное предложение по условиям договора — звоните, обсудим
+               </p>
+             </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tables section">
+        <div class="tables__content _container">
+          <div class="table table-one">
+            <table>
+                <thead>
+                    <tr>
+                        <td class="table-color"></td>
+                        <td class="table-color"></td>
+                        <td colspan="13" class="full-width table-color">КОЛИЧЕСТВО ЧАСОВ РАБОТЫ</td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th>1 час</th>
+                        <th>2 часа</th>
+                        <th>3 часа</th>
+                        <th>4 часа</th>
+                        <th>5 часов</th>
+                        <th>6 часов</th>
+                        <th>7 часов</th>
+                        <th>8 часов</th>
+                        <th>9 часов</th>
+                        <th>10 часов</th>
+                        <th>11 часов</th>
+                        <th>12 часов</th>
+                        <th class="table--mod">12 часов ночь</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Няня для младенца</td>
+                        <td>От руб./час</td>
+                        <td>500</td>
+                        <td>1000</td>
+                        <td>1500</td>
+                        <td>2000</td>
+                        <td>3000</td>
+                        <td>3000</td>
+                        <td>3150</td>
+                        <td>3600</td>
+                        <td>4050</td>
+                        <td>4500</td>
+                        <td>4400</td>
+                        <td>4200</td>
+                        <td>4000</td>
+                    </tr>
+                    <tr class="table-bg">
+                      <td>Няня воспитатель</td>
+                      <td>От 300 руб./час</td>
+                      <td>500</td>
+                      <td>1000</td>
+                      <td>1500</td>
+                      <td>2000</td>
+                      <td>3000</td>
+                      <td>3000</td>
+                      <td>3150</td>
+                      <td>3600</td>
+                      <td>4050</td>
+                      <td>4500</td>
+                      <td>4400</td>
+                      <td>4200</td>
+                      <td>4000</td>
+                    </tr>
+                    <tr>
+                      <td>Гувернантка для школьника</td>
+                      <td>От руб./час</td>
+                      <td>500</td>
+                      <td>1000</td>
+                      <td>1500</td>
+                      <td>2000</td>
+                      <td>3000</td>
+                      <td>3000</td>
+                      <td>3150</td>
+                      <td>3600</td>
+                      <td>4050</td>
+                      <td>4500</td>
+                      <td>4400</td>
+                      <td>4200</td>
+                      <td>4000</td>
+                    </tr>
+                    <tr class="table-bg">
+                        <td>Няня для деток с особенностями развития (мед.)</td>
+                        <td></td>
+                        <td colspan="13">5000</td>
+                    </tr>
+                    <tr>
+                        <td>Няня для заболевшего ребенка</td>
+                        <td></td>
+                        <td colspan="13">0</td>
+                    </tr>
+                    <tr class="table-bg">
+                        <td>Автоняня (+оплата бензина КЛИЕНТ)</td>
+                        <td>400</td>
+                        <td>800</td>
+                        <td>1600</td>
+                        <td>2400</td>
+                        <td>2800</td>
+                        <td>3500</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Няня за границу</td>
+                        <td></td>
+                        <td colspan="13">0</td>
+                    </tr>
+                </tbody>
+            </table>
+          </div>
+          <div class="table table-two">
+            <table>
+                <thead>
+                    <tr>
+                        <td class="table-color"></td>
+                        <td colspan="2" class="full-width table-color">СУТКИ</td>
+                        <td class="table-color">С ПРОЖИВАНИЕМ</td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th>до 2-х недель</th>
+                        <th>свыше 2-х недель</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody class="td--mod">
+                    <tr>
+                      <td>Няня для младенца</td>
+                      <td>4500</td>
+                      <td>3500</td>
+                      <td>от 60 000</td>
+                    </tr>
+                    <tr>
+                      <td>Няня для деток с особенностями развития (мед.)</td>
+                      <td>5000</td>
+                      <td>4000</td>
+                      <td>от 70 000</td>
+                    </tr>
+                </tbody>
+            </table>
+          </div>
+          <div class="tables__info">
+            <div class="tables__info-text">
+              <p>За срочность <span>+30%</span> от стоимости услуг няни</p>
+            </div>
+            <div class="tables__info-text">
+              <p>Няня для 2-х детей <span>+50%</span> от стоимости услуг няни для 1 ребенка</p>
+            </div>
+            <div class="tables__info-text">
+              <p>Знание Английского языка <span>+30%</span> от стоимости выбранной услуги</p>
+            </div>
+            <div class="tables__info-text">
+              <p>Разовый выход <span>4000 ₽</span> (до 5 часов), <span>5000 ₽</span>(свыше 5 часов)</p>
+            </div>
+            <div class="tables__info-star">
+              <img src="images/star.svg" alt="icon star">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec-texts section">
+        <div class="sec-texts__content sec-texts__content--mod _container">
+          <div class="sec-texts__top">
+            <div class="subtitle">
+              <h2>ВНИМАНИЕ!</h2>
+            </div>
+            <div class="text">
+              <p>
+                В таблице указаны фиксированные усреднённые цены, сформированные исходя из количества рабочих 
+                часов няни. Цифры могут меняться и корректироваться, в зависимости от множества факторов — графика 
+                няни, который вы выберете, а также типа её услуг, образования и квалификации. Стоимость работы няни 
+                может определяться и её конкретными обязанностями. Другими словами, смысл нашей тарификации таков: 
+                если вам нужна элитная няня — цена может вырасти; и наоборот, скромные потребности клиента мы в 
+                состоянии удовлетворить за меньшие деньги, чем указано в прайсе.
+              </p>
+            </div>
+            <div class="sec-texts__subtitle">
+              <h3>Чем больше количество часов работы няни  — тем дешевле вам обойдутся её услуги!</h3>
+            </div>
+            <div class="text">
+              <p>
+                Вознаграждение, которое берёт наше агентство, обусловлено тем, что мы выступаем полноценными посредниками 
+                между нанимателем и соискателями, а не просто некой площадкой для самостоятельного поиска. Другими словами,
+                мы подбираем няню под ваши требования, предоставляем несколько кандидатур на выбор, предварительно проверив
+                их по множеству параметров (состояние здоровья, опыт, «юридическая чистота», репутация по «чёрным спискам» 
+                и так далее), организуем собеседование — и полностью сопровождаем договор, вплоть до того момента, 
+                когда няня приступает к работе. Более того, в течении гарантийного срока, мы БЕСПЛАТНО осуществляем 
+                замену сотрудника, если по каким-либо причинам он вам не подошёл.
+              </p>
+            </div>
+            <div class="text">
+              <p>
+                Каждый обратившийся к нам клиент получает в своё распоряжение персонального менеджера, который всегда 
+                находится на связи, и готов решить возникающие ситуации — оперативно и в вашу пользу. Оплатив наши 
+                услуги, вы получаете огромную экономию времени, высочайшее качество работы, постоянную заботу и 
+                внимание наших сотрудников.
+              </p>
+            </div>
+          </div>
+          <div class="sec-texts__list">
+            <div class="sec-texts__subtitle">
+              <h3>Какие бонусы получают клиенты агентства нянь «Ваша няня»?</h3>
+            </div>
+            <div class="sec-texts__sublist">
+              <ul>
+                <li>Мы постоянно объявляем акции и предоставляем скидки (действующие в данный момент можно посмотреть здесь);</li>
+                <li>При повторном обращении к нам,  или при заявке от 2 вакансий и больше действуют специальные предложения на более выгодных условиях;</li>
+                <li>Существует постоянная  система индивидуальных скидок и рассрочка (обсуждается в договорном режиме, если у вас нет 
+                  возможности сразу оплатить всю сумму).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="price section">
+         <div class="price__content _container">
+            <div class="price__form">
+              <form class="form" action="#!">
+                <div class="form__title">
+                  <h3>Оставь заявку и <span>получи скидку 10%</span></h3>
+                </div>
+                <div class="form__label">
+                  <input class="form__input _req _name" id="formName" type="text" name="text" placeholder="Ваше имя">
+                  <input class="form__input _req _number" id="formNumber" type="text" name="number" placeholder="Ваш телефон">
+                  <button class="form__button btn" type="submit">Получить скидку</button>
+                </div>
+                <div class="form__text">
+                  <p>Нажимая на кнопку, вы соглашаетесь на обработку <a class="form__text-link" href="#!">персональных данных</a></p>
+                </div>
+              </form>
+            </div>
+         </div>
+      </section>
+
+      <section class="map map--mod section">
+        <div class="map__content _container">
+        </div>
+        <div class="map__img">
+          <picture>
+            <source media="(max-width: 390px)" srcset="images/map-mob.webp">
+            <img src="images/map.webp" alt="map" loading="lazy">
+          </picture>
+        </div>
+      </section>
+    </main>
+
+    <div class="popup" id="popup">
+      <div class="popup__body">
+        <div class="popup__content">
+          <a class="popup__close close-popup" href="#header">+</a>
+          <div class="popup-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <blockquote class="blockquote">
+                  <div class="blockquote__name">
+                    <cite>Марина Иванова</cite>
+                  </div>
+                  <div class="blockquote__text">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur. Suspendisse iaculis fames ut ultrices eu hendrerit etiam. 
+                      Montes id placerat sapien tincidunt id. Vel massa scelerisque purus in a rhoncus nunc. 
+                      Mi morbi odio ullamcorper tincidunt nibh scelerisque sagittis nunc tincidunt. Ipsum hac 
+                      viverra tincidunt viverra et sapien. Porta tincidunt egestas tempor id. In at lacus integer amet tincidunt. Nibh velit non eleifend vel id. 
+                      Feugiat quis sed aliquam eros in arcu nisi augue purus feugiat enim est tempus pulvinar.
+                    </p>
+                  </div>
+                  <div class="blockquote__date">
+                    <time datetime="2024-11-22">22.11.2024</time>
+                  </div>
+                </blockquote>
+              </div>
+              <div class="swiper-slide">
+                <blockquote class="blockquote">
+                  <div class="blockquote__name">
+                    <cite>Марина Иванова</cite>
+                  </div>
+                  <div class="blockquote__text">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur. Suspendisse iaculis fames ut ultrices eu hendrerit etiam. 
+                      Montes id placerat sapien tincidunt id. Vel massa scelerisque purus in a rhoncus nunc. 
+                      Mi morbi odio ullamcorper tincidunt nibh scelerisque sagittis nunc tincidunt. Ipsum hac 
+                      viverra tincidunt viverra et sapien. Porta tincidunt egestas tempor id. In at lacus integer amet tincidunt. Nibh velit non eleifend vel id. 
+                      Feugiat quis sed aliquam eros in arcu nisi augue purus feugiat enim est tempus pulvinar.
+                    </p>
+                  </div>
+                  <div class="blockquote__date">
+                    <time datetime="2024-11-22">22.11.2024</time>
+                  </div>
+                </blockquote>
+              </div>
+              <div class="swiper-slide">
+                <blockquote class="blockquote">
+                  <div class="blockquote__name">
+                    <cite>Марина Иванова</cite>
+                  </div>
+                  <div class="blockquote__text">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur. Suspendisse iaculis fames ut ultrices eu hendrerit etiam. 
+                      Montes id placerat sapien tincidunt id. Vel massa scelerisque purus in a rhoncus nunc. 
+                      Mi morbi odio ullamcorper tincidunt nibh scelerisque sagittis nunc tincidunt. Ipsum hac 
+                      viverra tincidunt viverra et sapien. Porta tincidunt egestas tempor id. In at lacus integer amet tincidunt. Nibh velit non eleifend vel id. 
+                      Feugiat quis sed aliquam eros in arcu nisi augue purus feugiat enim est tempus pulvinar.
+                    </p>
+                  </div>
+                  <div class="blockquote__date">
+                    <time datetime="2024-11-22">22.11.2024</time>
+                  </div>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-prev swiper-prev-popup"></div>
+          <div class="popup__button">
+            <a class="btn btn-outline" href="#!">Перейти ко всем отзывам</a>
+          </div>
+          <div class="swiper-button-next swiper-next-popup"></div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer__content">
+        <div class="footer__body _container">
+          <div class="footer__block">
+            <a class="footer__logo" href="index.html">
+              <img src="images/logo.svg" alt="logo">
+            </a>
+            <a class="btn btn-outline" href="#!">Обратный звонок</a>
+          </div>
+          <div class="footer__wrapper">
+            <div class="footer__block">
+              <div class="footer__block-title">
+                <h3>О компании</h3>
+              </div>
+              <div class="footer__block-list">
+                <ul>
+                  <li>Главная страница</li>
+                  <li>Цены</li>
+                  <li>Отзывы</li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__block">
+              <div class="footer__block-title">
+                <h3>Услуги</h3>
+              </div>
+              <div class="footer__block-list">
+                <ul>
+                  <li>Няня для младенца 1</li>
+                  <li>Няня для младенца 2</li>
+                  <li>Контакты</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer__block">
+            <div class="footer__block-title">
+              <h3>Контакты</h3>
+            </div>
+            <div class="footer__contacts">
+              <div class="footer__contacts-address">
+                <span>Сочи</span>
+                <address>ул. С. Дерябиной, 32Б</address>
+              </div>
+              <a href="tel:+78000000000" class="footer__contacts-tel">8-800-000-00-00</a>
+              <div class="footer__messengers">
+                <a href="#!">
+                  <img src="images/Icon-vk.svg" alt="icon vk">
+                </a>
+                <a href="#!">
+                  <img src="images/Icon-wp.svg" alt="icon wp">
+                </a>
+                <a href="#!">
+                  <img src="images/Icon-tg.svg" alt="icon tg">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p>© 2025 Не является публичной офертой</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script defer src="https://unpkg.com/imask"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script defer src="js/main.js"></script>  
+</body>
+
+</html>

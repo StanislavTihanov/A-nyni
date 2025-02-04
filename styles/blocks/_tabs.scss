@@ -56,7 +56,7 @@
   #tab-7:checked ~ .content-7,
   #tab-8:checked ~ .content-8,
   #tab-9:checked ~ .content-9  {
-    display: block;
+    display: flex;
     flex-basis: 55rem;
   }
   #tab-1:checked ~ .tab-labels label[for="tab-1"],
@@ -68,7 +68,7 @@
   #tab-7:checked ~ .tab-labels label[for="tab-7"],
   #tab-8:checked ~ .tab-labels label[for="tab-8"],
   #tab-9:checked ~ .tab-labels label[for="tab-9"]  {
-    
+    display: flex;
   }
   /* Скрываем сами радиокнопки */
   input[type="radio"] {
