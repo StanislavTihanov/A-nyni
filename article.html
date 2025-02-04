@@ -5,15 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="эталон">
-  <meta name="keywords" content="эталон">
-  <meta property="og:title" content="эталон">
+  <meta name="description" content="Агентство нянь">
+  <meta name="keywords" content="Агентство нянь">
+  <meta property="og:title" content="Агентство нянь">
   <meta property="og:url" content="ссылка на сайт">
   <meta property="og:image:width" content="1000">
   <meta property="og:image:height" content="500">
-  <meta property="og:description" content="эталон">
+  <meta property="og:description" content="Агентство нянь">
   <meta property="og:image" content="путь к картинке/image.webp">
-  <title>Эталон</title>
+  <title>Агентство нянь</title>
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
@@ -121,7 +121,7 @@
             </div>
           </div>
         </div>
-        <div class="main-section__bg _ibg">
+        <div class="main-section__bg">
           <picture>
             <source media="(max-width: 390px)" srcset="images/bg-mob3.webp">
             <img src="images/bg.webp" alt="image">
@@ -153,9 +153,9 @@
                 <h3>Содержание статьи</h3>
               </div>
               <ol start="1">
-                <li><a class="article__nav-link" href="#!">Пункт первый, default</a></li>
-                <li><a class="article__nav-link" href="#!">Пункт второй, hover</a></li>
-                <li><a class="article__nav-link" href="#!">Пункт третий, click</a></li>
+                <li><a class="article__nav-link" href="#article-block">Пункт первый, default</a></li>
+                <li><a class="article__nav-link" href="#article-title2">Пункт второй, hover</a></li>
+                <li><a class="article__nav-link" href="#article-title3">Пункт третий, click</a></li>
                 <li><a class="article__nav-link" href="#!">Пункт четвертый, при условии 2х строк</a></li>
                 <li><a class="article__nav-link" href="#!">Если нужен подзаголовок</a>
                   <ul>
@@ -173,7 +173,7 @@
                 распоряжение идеальную нянюшку, рекомендуем нанимателям подготовиться к выбору. 
                 Ведь существуют вопросы, ответы на которые известны только вам:</p>
             </div>
-            <div class="article__block">
+            <div class="article__block" id="article-block">
               <div class="article__block-image">
                 <img src="images/articles-block-img.png" alt="article image">
               </div>
@@ -193,7 +193,7 @@
                 </div>
               </div>
             </div>
-            <div class="article__title">
+            <div class="article__title" id="article-title2">
               <h2>Размер бюджета, которым вы располагаете</h2>
             </div>
             <div class="article__text">
@@ -201,7 +201,7 @@
                 Увы, экономические реалии таковы, что уже не получится нанять, как в сказке о Мэри Поппинс, «самую-самую лучшую няню с самым-самым маленьким жалованьем». Как бы нам ни хотелось предоставить каждой семье по суперпрофессионалу, услуги элитных нянь стоят дороже, чем обычных подрабатывающих женщин с хорошим личным опытом (свои взрослые дети). К тому же, многое зависит от графика работы, с которым тоже нужно определиться заранее. Возможны самые разные варианты — несколько часов в день, 12/12, сутки/трое, няня с проживанием в семье на правах постоянного сотрудника (оплата услуг строится как по принципу почасовых выплат, так и на основе оклада с премиальными).
               </p>
             </div>
-            <div class="article__subtitle">
+            <div class="article__subtitle" id="article-title3">
               <h3>Какой образ няни наиболее предпочтителен для вас и вашего ребенка?</h3>
             </div>
             <div class="article__text">
@@ -237,7 +237,7 @@
               <h2>Популярные статьи</h2>
             </div>
             <div class="reviews__buttons">
-              <a class="btn btn-filled" href="#!" aria-label="Все статьи">Все статьи</a>
+              <a class="btn btn-filled" href="blog.html" aria-label="Все статьи">Все статьи</a>
               <div class="swiper-button-prev art-button-prev"></div>
               <div class="swiper-button-next art-button-next"></div>
             </div>
@@ -643,9 +643,9 @@
               </div>
               <div class="footer__block-list">
                 <ul>
-                  <li>Главная страница</li>
-                  <li>Цены</li>
-                  <li>Отзывы</li>
+                  <li><a href="index.html">Главная страница</a></li>
+                  <li> <a href="price.html">Цены</a></li>
+                  <li> <a href="reviews.html">Отзывы</a></li>
                 </ul>
               </div>
             </div>
@@ -655,9 +655,9 @@
               </div>
               <div class="footer__block-list">
                 <ul>
-                  <li>Няня для младенца 1</li>
-                  <li>Няня для младенца 2</li>
-                  <li>Контакты</li>
+                  <li> <a href="services.html">Няня для младенца 1</a></li>
+                  <li> <a href="services.html">Няня для младенца 2</a></li>
+                  <li> <a href="contacts.html">Контакты</a></li>
                 </ul>
               </div>
             </div>
@@ -692,7 +692,6 @@
       </div>
     </footer>
   </div>
-  <script defer src="https://unpkg.com/imask"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script defer src="js/main.js"></script>  
 </body>

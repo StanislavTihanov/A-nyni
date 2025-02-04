@@ -1,8 +1,9 @@
 /*---------------------------------------articles----------------------------*/
 .articles {
     background-color: #F8F8F8;
+    padding-bottom: 5rem;
     @include mobile {
-        margin-bottom: 3rem;
+        padding-bottom: 6rem;
     }
     &__content {
         position: relative;
@@ -16,12 +17,20 @@
         border-radius: 25px;
         height: 100%;
         @include table {
+            margin-right: 0.2rem;
+        }
+        @include mobile {
             flex-wrap: wrap;
         }
     }
     &__img {
+        flex-basis: 18.5rem;
         img {
             border-radius: 8px;
+            width: 100%;
+        }
+        @include mobile {
+            flex-basis: 100%;
         }
     }
     &__info {

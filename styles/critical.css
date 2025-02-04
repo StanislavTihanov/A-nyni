@@ -328,58 +328,6 @@ address, cite {
 }
 
 /*----------------------------------menu--------------------------------*/
-/*----------------------------------search--------------------------------*/
-.search__box {
-  flex: none;
-  z-index: 4;
-}
-.search__btn {
-  background-color: inherit;
-  cursor: pointer;
-  padding: 8.5px;
-  position: relative;
-  z-index: 4;
-}
-.search__btn svg {
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-.search__btn._act {
-  opacity: 0;
-}
-.search__label_input {
-  border-bottom: 1px solid rgb(17, 53, 167);
-  width: 100%;
-}
-.search__window {
-  position: absolute;
-  right: 0;
-  width: 50rem;
-  background: rgba(255, 255, 255, 0.94);
-  padding: 50px 85px;
-  border-radius: 15px;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.5s;
-  transform: translateY(-100%);
-  z-index: 999;
-}
-.search__label {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--color-blue);
-  font-size: 18px;
-}
-.search__window._act {
-  opacity: 1;
-  visibility: visible;
-  width: 59%;
-  transform: translateY(0);
-}
-
-/*----------------------------------search--------------------------------*/
 /*----------------------------------burger--------------------------------*/
 .burger {
   display: none;
@@ -434,7 +382,7 @@ address, cite {
 /*----------------------------------burger--------------------------------*/
 /*----------------------------------main-section--------------------------------*/
 .main-section {
-  margin-top: 7rem;
+  margin-top: 9rem;
   position: relative;
 }
 @media (max-width: 64rem) {
@@ -459,11 +407,12 @@ address, cite {
 .main-section__body {
   display: flex;
   align-items: center;
-  gap: 1rem 5rem;
+  gap: 2.5rem 5rem;
 }
 @media (max-width: 48rem) {
   .main-section__body {
     flex-wrap: wrap;
+    justify-content: center;
   }
 }
 .main-section__info {
@@ -524,14 +473,22 @@ address, cite {
   top: 0;
   left: 0;
 }
+.main-section__bg img {
+  width: 100%;
+}
 @media (max-width: 48rem) {
   .main-section--mod {
-    padding-bottom: 21rem;
+    padding-bottom: 22rem;
   }
 }
 @media (max-width: 48rem) {
   .main-section--m {
     padding-bottom: 12rem;
+  }
+}
+@media (max-width: 48rem) {
+  .main-section--art {
+    padding-bottom: 2rem;
   }
 }
 

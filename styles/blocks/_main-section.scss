@@ -1,6 +1,6 @@
 /*----------------------------------main-section--------------------------------*/
 .main-section {
-    margin-top: 7rem;
+    margin-top: 9rem;
     position: relative;
     @include table {
         margin-top: 13.5rem;
@@ -20,9 +20,10 @@
     &__body {
         display: flex;
         align-items: center;
-        gap: 1rem 5rem;
+        gap: 2.5rem 5rem;
         @include mobile {
             flex-wrap: wrap;
+            justify-content: center;
         }
     }
     &__info {
@@ -76,6 +77,9 @@
         height: 100%;
         top: 0;
         left: 0;
+        img {
+            width: 100%;
+        }
     }
     &--mod {
         @include mobile {

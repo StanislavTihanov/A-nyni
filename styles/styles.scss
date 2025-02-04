@@ -1,36 +1,37 @@
+@import 
+'normalize',
+'mixins',
+'fonts',
+'media',
+'variables';
 
-@use 'normalize';
-@use 'mixins';
-@use 'fonts';
-@use 'media';
-@use 'variables';
-
-@use 'blocks/globals';
-@use 'blocks/header';
-@use 'blocks/menu';
-@use 'blocks/burger';
-@use 'blocks/breadcrumbs';
-@use 'blocks/main-section';
-@use 'blocks/sec-services';
-@use 'blocks/card';
-@use 'blocks/blockquote';
-@use 'blocks/advantages';
-@use 'blocks/reviews';
-@use 'blocks/sec-texts';
-@use 'blocks/articles';
-@use 'blocks/map';
-@use 'blocks/calculator';
-@use 'blocks/tables';
-@use 'blocks/contacts';
-@use 'blocks/blog';
-@use 'blocks/article';
-@use 'blocks/sliders';
-@use 'blocks/popup';
-@use 'blocks/form';
-@use 'blocks/radio';
-@use 'blocks/similar';
-@use 'blocks/checkbox';
-@use 'blocks/select';
-@use 'blocks/tabs';
-@use 'blocks/footer';
+@import 
+'blocks/globals',
+'blocks/header',
+'blocks/menu',
+'blocks/burger',
+'blocks/breadcrumbs',
+'blocks/main-section',
+'blocks/sec-services',
+'blocks/card',
+'blocks/blockquote',
+'blocks/advantages',
+'blocks/reviews',
+'blocks/sec-texts',
+'blocks/articles',
+'blocks/map',
+'blocks/calculator',
+'blocks/tables',
+'blocks/contacts',
+'blocks/blog',
+'blocks/article',
+'blocks/sliders',
+'blocks/popup',
+'blocks/form',
+'blocks/radio',
+'blocks/similar',
+'blocks/checkbox',
+'blocks/select',
+'blocks/tabs',
+'blocks/footer';
 

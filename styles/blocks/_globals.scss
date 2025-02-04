@@ -24,9 +24,9 @@ body {
     padding: 0rem 0.6rem;
 }
 .section {
-    padding: 4rem 0rem;
+    padding: 2rem 0rem 4rem 0rem;
     @include table {
-        padding: 1.25rem 0rem;
+        padding: 2rem 0rem;
     }
 }
 ._ibg {
@@ -51,11 +51,11 @@ body {
     line-height: 100%;
     text-transform: uppercase;
     font-weight: 700;
-    &--mod {
-        @include fluid-text(24, 30);
-    }
     @include mobile {
         text-align: center;
+    }
+    &--mod {
+        @include fluid-text(24, 30);
     }
 }
 .subtitle {
@@ -105,5 +105,9 @@ body {
 }
 .price {
     background-color: #EAF3F5;
+    padding: 3rem 0rem;
+    .form {
+        margin-bottom: 0rem;
+    }
 }
 /*----------------------------------global--------------------------------*/

@@ -3,11 +3,13 @@
 .contacts {
     @include mobile {
         text-align: center;
-        margin-top: -22rem;
+        margin-top: -20rem;
         position: relative;
     }
     z-index: 9;
     &__content {
+        position: relative;
+        z-index: 2;
         .subtitle {
             margin-bottom: 1.3rem;
             @include mobile {

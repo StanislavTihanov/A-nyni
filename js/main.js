@@ -1,48 +1,4 @@
 "use strict"
-//------------------------------------------------------------------------Готовые блоки кода
-
-//------------------------------------------------------------------------preloader
-//document.body.onload = () => {
-//  setTimeout(() => {
-//    let preloader = document.getElementById('preloader');
-//    if (!preloader.classList.contains('done')) {
-//      preloader.classList.add('done');
-//    }
-//  }, 1000);
-//}
-//------------------------------------------------------------------------preloader
-
-//------------------------------------------------------------------------таймер обратного отсчета
-//const startDays = 2; // Количество дней
-//const startHours = 5; // Количество часов
-//const startMinutes = 10; // Количество минут
-//const startSeconds = 0; // Количество секунд
-//
-//// Переводим все в секунды
-//let time = startDays * 24 * 60 * 60 + startHours * 60 * 60 + startMinutes * 60 + startSeconds;
-//
-//const countdownElement = document.getElementById('countdown');
-//
-//function updateCountdown() {
-//    const days = Math.floor(time / (24 * 60 * 60)); // Количество дней
-//    const hours = Math.floor((time % (24 * 60 * 60)) / 3600); // Количество часов
-//    const minutes = Math.floor((time % 3600) / 60); // Количество минут
-//    const seconds = time % 60; // Количество секунд
-//
-//    // Форматируем время
-//    countdownElement.innerText = `${days}:${hours < 10 ? '0' : ''}${hours}:${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-//
-//    if (time > 0) {
-//        time--;
-//    } else {
-//        clearInterval(timer);
-//        countdownElement.innerText = "Время вышло!";
-//    }
-//}
-//
-//const timer = setInterval(updateCountdown, 1000);
-//------------------------------------------------------------------------таймер обратного отсчета
-
 
 //------------------------------------------------------------------------появление бекграунда у шапки при прокрутки вниз
 window.addEventListener('scroll', () => {
@@ -53,31 +9,6 @@ window.addEventListener('scroll', () => {
   }
 });
 //------------------------------------------------------------------------появление бекграунда у шапки при прокрутки вниз
-
-
-//------------------------------------------------------------------------search
-//const searchButtons = document.querySelectorAll('.search__btn');
-//const searchWindows = document.querySelectorAll('.search__window');
-//
-//searchButtons.forEach((searchBtn, index) => {
-//  const searchWindow = searchWindows[index]; // Привязываем соответствующее окно к каждой кнопке
-//
-//  searchBtn.addEventListener("click", function (e) {
-//    e.stopPropagation();
-//    searchWindow.classList.toggle('_act'); // Открываем/закрываем конкретное окно поиска
-//  });
-//
-//  document.addEventListener("click", function (e) {
-//    if (!searchBtn.contains(e.target) && !searchWindow.contains(e.target)) {
-//      searchWindow.classList.remove('_act'); // Закрываем окно, если клик вне кнопки или окна
-//    }
-//  });
-//});
-
-//------------------------------------------------------------------------search
-
-
-
 
 
 //------------------------------------------------------------------------Меню-Бургер
@@ -98,39 +29,21 @@ document.addEventListener ('click', (e) => {
   }
 })
 //------------------------------------------------------------------------закрытие меню при клике вне его
+//------------------------------------------------------------------------скролинг в статье
+document.querySelectorAll('.article__nav-link').forEach(link => {
+  link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+      const headerHeight = document.querySelector('header').offsetHeight; // Высота хедера
 
-
-//------------------------------------------------------------------------Прокрутка при клике
-//let buttons = document.querySelectorAll('.menu__link');
-//
-//buttons.forEach((elem)=>{
-//  elem.addEventListener('click',()=>{
-//    menuBody.classList.remove('_active');
-//    burgerMenu.classList.remove('_active');
-//  })
-//})
-//
-//const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
-//
-//if (menuLinks.length > 0) {
-//  menuLinks.forEach(menuLink => {
-//    menuLink.addEventListener("click", onMenuLinkClick);
-//  });
-//  function onMenuLinkClick(e) {
-//    const menuLink = e.target;
-//    if(menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
-//        const gotoBlock = document.querySelector(menuLink.dataset.goto);
-//        const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY - document.querySelector('header').offsetHeight;
-//      
-//        window.scrollTo({
-//        top:gotoBlockValue,
-//        behavior: "smooth"
-//      });
-//      e.preventDefault();
-//    }
-//  }
-//}
-//------------------------------------------------------------------------Прокрутка при клике
+      if (targetElement) {
+          const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
+          window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+      }
+  });
+});
+//------------------------------------------------------------------------скролинг в статье
 
 //------------------------------------------------------------------------Слайдер
 const reviewsSlider = document.querySelector('.reviews-slider');
@@ -227,57 +140,6 @@ if (similarSlider ) {
   });
 }
 //------------------------------------------------------------------------Слайдер
-
-
-//-----------------------------------------------------------------------сортировка по атрибутам
-
-//class FilterGallery {
-//  
-//  constructor() {
-//    // Находим элементы меню и контейнер с постами
-//    this.filterMenuList = document.querySelectorAll('.filtermenu__list li');
-//    this.container = document.querySelector('.filtermenu__container');
-//    this.posts = Array.from(this.container.querySelectorAll('.post'));  // Собираем все посты один раз в массив
-//    
-//    this.updateMenu('all');
-//    this.filterMenuList.forEach(item => item.addEventListener('click', (event) => this.onClickFilterMenu(event)));
-//  }
-//
-//  onClickFilterMenu(event) {
-//    const target = event.target.closest('li');  // Используем closest чтобы найти li
-//    const targetFilter = target.getAttribute('data-filter');
-//
-//    this.updateMenu(targetFilter);
-//    this.updateGallery(targetFilter);
-//  }
-//
-//  updateMenu(targetFilter) {
-//    this.filterMenuList.forEach(item => item.classList.remove('active_'));
-//    const activeItem = Array.from(this.filterMenuList).find(item => item.getAttribute('data-filter') === targetFilter);
-//    if (activeItem) activeItem.classList.add('active_');
-//  }
-//
-//  updateGallery(targetFilter) {
-//    // Оптимизация через фильтрацию всех постов разом
-//    const postsToShow = targetFilter === 'all'
-//      ? this.posts
-//      : this.posts.filter(post => post.classList.contains(targetFilter));
-//    
-//    const postsToHide = this.posts.filter(post => !postsToShow.includes(post));
-//
-//    // Анимация скрытия и показа
-//    this.container.style.opacity = 0;
-//    setTimeout(() => {
-//      postsToHide.forEach(post => post.style.display = 'none');
-//      postsToShow.forEach(post => post.style.display = '');
-//      this.container.style.opacity = 1;
-//    }, 300);
-//  }
-//}
-//const filterGallery = new FilterGallery();
-
-
-//-----------------------------------------------------------------------сортировка по атрибутам
 
 //------------------------------------------------------------------------select выпадающий список
 document.querySelectorAll('.dropdown').forEach(function(dropDownWrapper) {
@@ -456,40 +318,6 @@ document.addEventListener('keydown', function (e) {
 });
 //------------------------------------------------------------------------popup
 
-
-//------------------------------------------------------------------------Animation
-//const animItems = document.querySelectorAll('._anim-items');
-//if (animItems.length > 0) {
-//  window.addEventListener('scroll', animOnScroll);
-//  function animOnScroll() {
-//    for (let index = 0; index < animItems.length; index++) {
-//        const animItem = animItems[index];
-//        const animItemHeight = animItem.offsetHeight;
-//        const animItemOffset = offset(animItem).top;
-//        const animStart = 5;
-//
-//        let animItemPoint = window.innerHeight - animItemHeight / animStart;
-//
-//        if (animItemHeight > window.innerHeight) {
-//          animItemPoint = window.innerHeight - window.innerHeight / animStart;
-//        }
-//
-//        if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
-//          animItem.classList.add('_action');
-//        } else {
-//          animItem.classList.remove('_action');
-//        }
-//    }
-//  }
-//  function offset(el) {
-//    const rect = el.getBoundingClientRect(),
-//    scrollLeft  = window.pageXOffset || document.documentElement.scrollLeft,
-//    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-//    return {top: rect.top + scrollTop, left: rect.left + screenLeft}
-//  }
-//  animOnScroll();
-//}
-//------------------------------------------------------------------------Animation
 
 //------------------------------------------------------------------------Проверка формы
 document.addEventListener('DOMContentLoaded', function () {
